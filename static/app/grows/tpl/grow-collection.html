@@ -1,0 +1,90 @@
+<style>
+    .list-group-item:hover {
+        background: #eee;
+        cursor: pointer;
+    }
+
+    .tooltip>.tooltip-inner {
+        text-align: left;
+        background: #F9EDBE;
+        color: #000;
+        padding-left: 0px;
+    }
+</style>
+
+<div class="row" style="margin-top:30px;">
+    <div class="col-md-6">
+        <div class="panel panel-default" id="auto_message_from_comment">
+            <div class="panel-heading">
+                {{GROW_COMMENT_TITLE}}
+            </div>
+            <div class="panel-body">
+                <div class="col-md-12">
+                    <p class="text-gray">
+                        {{GROW_COMMENT_DESC}}
+                    </p>
+                    <!-- <div>
+						<a href="javascript:void(0);" id="tooltip_comment" data-toggle="tooltip" >Read this </a> before testing your setup.
+					</div> -->
+                </div>
+                <div class="col-md-12" style="margin-top: 10px;">
+                    <button class="btn btn-default btn-md" id="add_rule" title="ADD RULE">
+                        <span style="color: #333;" class="fa fa-plus"></span> {{GROW_COMMENT_ADD_RULE}}
+                    </button>
+                </div>
+                <div class="col-md-12 list-group" id="rule-container" style="padding-right: 0px;"></div>
+            </div>
+        </div>
+
+        <div class="panel panel-default hide" id="embedded_webview">
+            <div class="panel-heading">
+                Embeded Form in Messenger
+            </div>
+            <div class="panel-body">
+                <div class="col-md-12">
+                    <img src="{% print(static_url) %}/images/17626044_283918708702158_8986183537380032512_n.png"
+                        alt="Embeded Form in Messenger" style="width: 103.2%; margin-left: -9px;" />
+                </div>
+                <div class="col-md-12 list-group" id="webview_container" style="padding-right: 0px;">
+                    <!-- webview container -->
+                </div>
+                <div class="col-md-12" style="margin-top: 10px;">
+                    <button class="btn btn-default btn-md" id="add_new_webview">
+                        <span>Add new</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="panel panel-default" id="auto_message_from_comment">
+            <div class="panel-heading">
+                Customer Chat Plugin for Your Website
+                <!-- <label class="switch">
+                    <input type="checkbox" class="form-control" id="comment-status-switch">
+                    <span class="slider round"></span>
+                </label> -->
+            </div>
+            <div class="panel-body">
+                <div class="col-md-12">
+                    <p class="text-gray">
+                        This plugin allows you to place a Messenger chat window right on your website. All your site
+                        visitors starting a chat on the page will automatically become your bot subscribers!
+                    </p>
+                </div>
+                <div class="add-link-to-customer-chat-image float-right"></div>
+                <div class="col-md-12" style="margin-top: 10px;">
+                    <button class="btn btn-default btn-md" id="enable_message">
+                        <span>ENABLE</span>
+                    </button>
+                </div>
+
+
+                <!-- <div class="col-md-12 list-group" id="rule-container"></div> -->
+            </div>
+        </div>
+    </div>
+
+</div>

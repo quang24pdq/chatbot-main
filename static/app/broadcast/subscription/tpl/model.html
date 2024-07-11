@@ -1,0 +1,55 @@
+<div id="broadcast-area" style="position: relative;">
+	<div id="broatcast-tool">
+		<div class="row" style="margin: 5px 0px 0px 0px;">
+			<div class="col-md-11 col-xs-10 padding-lr-0">
+				<input id="broadcast-name" class="form-control mod-item-name" spellcheck="false" dir="auto"
+					style="float: left; width: 300px;" data-bind="value:name"/>
+				<button id="send" class="btn btn-danger">
+					<i class="fa fa-paper-plane" aria-hidden="true"></i>
+					{{SEND}}
+				</button>
+			</div>
+			<div class="col-md-1 col-xs-2" style="text-align: right">
+				<a type="button" class="btn btn-link btn-delete" id="delete" title="Delete this broadcast">
+					<span class="fa fa-trash-alt"></span>
+				</a>
+			</div>
+		</div>
+	</div>
+	<hr style="margin-top: 0px;margin-bottom: 13px;">
+	<div class="row" style="min-height: 100px;">
+		<div id="cards-container">
+			<!-- RENDER CARDS HERE -->
+		</div>
+	</div>
+	<div class="row">
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12 col-xs-12">
+						<ul class="nav navbar-nav" id="cards">
+							<li><a href="javascript:void(0);" id="create_card_text" data-card-type="text">{{TEXT_CARD}}</a></li>
+							<li><a href="javascript:void(0);" id="create_card_image" data-card-type="image">{{IMAGE_CARD}}</a></li>
+							<li><a href="javascript:void(0);" id="create_generic_card" data-card-type="generic">{{GENERIC_CARD}}</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</div>
+	<div class="row">
+		<div class="col-lg-12 col-md-12 form-group">
+			<p><i style="color: #8a9095;">Can:</i></p>
+			<p><i style="color: #8a9095;">Message your target audience on Facebook from the platforms billions of active global users.</i></p>
+			<p><i style="color: #8a9095;">Have one-to-one direct conversations with your customers and leads in a way that’s personalized and also scalable.</i></p>
+			<p><i style="color: #8a9095;">Send interactive marketing communications in an interface that’s mobile-friendly out of the box.</i></p>
+		</div>
+		<div class="col-lg-12 col-md-12 form-group">
+			<p><i style="color: #8a9095;">Rule:</i></p>
+			<p><i style="color: #8a9095;">Non-promotional content.</i></p>
+			<p><i style="color: #8a9095;">Falls under defined categories (news, productivity, or personal tracking).</i></p>
+			<p><i style="color: #8a9095;">Recipients of subscription messages have to opt-in to subscription message.</i></p>
+		</div>
+	</div>
+	<div class="broadcast-overlay" title="Không thể sửa."></div>
+</div>

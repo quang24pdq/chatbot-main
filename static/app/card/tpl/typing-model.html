@@ -1,0 +1,40 @@
+<div class="col-md-12 container-hover">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<div class="border-gradient-round-27">
+				<div class="border-gradient-round-container" id="position">
+				</div>
+			</div>
+			<div style="margin-left: 28px; font-weight: 550;">
+				{{TYPING_CARD}}
+			</div>
+		</div>
+		<div class="panel-body">
+			<div class="form-inline">
+				<span
+					style="background: url({{static_url}}/images/ic_typing.svg);width: 24px; height: 24px;display: inline-block; background-size: 24px;vertical-align: bottom;"></span>
+				<label style="line-height: 14px;"> {{TYPING_CARD_DESCRIPTION}}</label>
+			</div>
+			<div class="form-inline">
+				<div class="form-group" style="margin-right:0px;padding-right:0px;">
+					<input id="value_time" data-bind="value:time" class="form-control" step="0.1" type="range" min="0.1"
+						max="10" style="box-shadow: none;">
+					<span id="rangeValLabel">0.1</span><span> (s)</span>
+				</div>
+			</div>
+		</div>
+		<div class="deletebtn">
+			<a type="button" class="btn btn-link fa-inverse btn-delete" id="up_card_position" style="padding: 6px 0px;">
+				<span class="glyphicon glyphicon-arrow-up"></span>
+			</a>
+			<a type="button" class="btn btn-link fa-inverse btn-delete" id="down_card_position"
+				style="padding: 6px 0px;">
+				<span class="glyphicon glyphicon-arrow-down"></span>
+			</a>
+			<a type="button" class="btn btn-link fa-inverse btn-delete" id="delete_card" title="Delete this card">
+				<span class="glyphicon glyphicon-trash remove"></span>
+			</a>
+		</div>
+	</div>
+
+</div>

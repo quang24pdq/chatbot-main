@@ -1,0 +1,43 @@
+{
+    "_id": {
+        "type": "string",
+        "primary": true
+    },
+    "bot_id": {
+        "type": "string"
+    },
+    "name": {
+        "type": "string"
+    },
+    "type_tracking": {
+        "type": "string"
+    },
+    "specific_link": {
+        "type": "string"
+    },
+    "type_reply": {
+        "type": "string"
+    },
+    "rule_comments": {
+        "type": "string"
+    },
+    "reply_common": {
+        "type": "string"
+    },
+    "position": {
+        "type": "string"
+    },
+    "event":{
+        "type": "string"
+    },
+    "deleted_at": {
+        "type": "datetime"
+    },
+    "deleted_by": {
+        "type": "string"
+    },
+    "active": {
+        "type": "boolean",
+        "default": true
+    }
+}

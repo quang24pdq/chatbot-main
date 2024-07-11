@@ -1,0 +1,25 @@
+{
+    "_id": {
+        "type": "string",
+        "primary": true
+    },
+    "bot_id": {
+        "type": "string"
+    },
+    "feed_item": {
+    	"type": "string"
+    },
+    "rules": {
+    	"type": "list"
+    },
+    "deleted_at": {
+        "type": "datetime"
+    },
+    "deleted_by": {
+        "type": "string"
+    },
+    "active": {
+        "type": "boolean",
+        "default": false
+    }
+}

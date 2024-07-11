@@ -1,0 +1,45 @@
+{
+    "_id": {
+        "type": "string",
+        "primary": true
+    },
+    "title": {
+        "type": "string",
+        "default": "Powered by UPGO.vn"
+    },
+    "fields": {
+        "type": "list"
+    },
+    "background_color": {
+        "type": "string"
+    },
+    "webview_height_ratio": {
+        "type": "string",
+        "default": "tall"
+    },
+    "z_index": {
+        "type": "number"
+    },
+    "submit_url": {
+        "type": "string"
+    },
+    "redirect_url": {
+        "type": "string"
+    },
+    "position": {
+        "type": "number"
+    },
+    "created_at": {
+        "type": "number"
+    },
+    "deleted": {
+        "type": "boolean",
+        "default": false
+    },
+    "bot_id": {
+        "type": "string"
+    },
+    "tenant_id": {
+        "type": "string"
+    }
+}

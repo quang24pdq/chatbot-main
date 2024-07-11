@@ -1,0 +1,56 @@
+<div class="col-md-12 container-hover">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<div class="border-gradient-round-27">
+				<div class="border-gradient-round-container" id="position">
+				</div>
+			</div>
+			<div style="margin-left: 28px; font-weight: 550;">
+				{{QUICK_REPLY_CARD}}
+			</div>
+		</div>
+		<div class="panel-body">
+			<div class="row">
+				<div class="col-md-12">
+					<textarea rows="2" card-quickreply-bind="value:text" maxlength="630"></textarea>
+					<hr />
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-8">
+					<div style="font-size: 13px; opacity: 0.6;">&nbsp;</div>
+					<div style="margin-bottom:5px; display: flex;">
+						<div id="buttons-container" style="width: 100%;"></div>
+					</div>
+					<button class="btn btn-default" id="add_button"><span class="fa fa-plus"></span>
+						{{ADD_QUICK_REPLY}}</button>
+				</div>
+				<div class="col-md-4" id="attribute_area">
+					<div style="font-size: 13px; opacity: 0.6;">{{SAVE_QUICK_REPLY_TO_ATTR}}:</div>
+
+					<input class="form-control" type="text" id="attribute" autocomplete="off">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-12">
+						<ul class="col-lg-12 col-xs-12 dropdown-menu" id="attribute_suggestion_list"
+							style="max-height: 350px; min-width: 200px; overflow: scroll;"></ul>
+					</div>
+				</div>
+				<div class="col-md-4 hide">
+					<div style="font-size: 13px; opacity: 0.6;">{{QUICK_REPLY_CARD_DESC}}</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- <div class="col-md-4"></div> -->
+	<div class="deletebtn">
+		<a type="button" class="btn btn-link fa-inverse btn-delete" id="up_card_position" style="padding: 6px 0px;">
+			<span class="glyphicon glyphicon-arrow-up"></span>
+		</a>
+		<a type="button" class="btn btn-link fa-inverse btn-delete" id="down_card_position" style="padding: 6px 0px;">
+			<span class="glyphicon glyphicon-arrow-down"></span>
+		</a>
+		<a type="button" class="btn btn-link fa-inverse btn-delete" id="delete_card" title="Delete this card">
+			<span class="glyphicon glyphicon-trash remove"></span>
+		</a>
+	</div>
+</div>

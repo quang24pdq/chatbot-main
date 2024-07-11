@@ -1,0 +1,36 @@
+<!-- <div class="margin-bottom-10" block-bind="toolbar"></div> -->
+<div block-bind="content" style="width: 100%;">
+	<div class="row" style="margin-bottom: 0px;">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-12 container-hover" style="overflow:scroll;">
+			<div class="panel panel-default" style="margin-top: 15px;">
+				<div class="panel-body">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<div id="refresh-permissions" data-test-id="" class="eda573e97a2a1194268b551fbed2ea5f-styl refresh-permissions-section row gutter-2">
+							<div class="col-12 sm-col-3 col"><h4>Refresh Facebook Permissions</h4></div>
+							<div class="m-t sm-m-t-0 col-12 sm-col-4 col">
+								<a class="" href="javascript:void(0);" onclick="javascript:gonrinApp().refreshPermission();" style="position: relative;">
+									<span class="_src_components_Btn_Btn_module__label">Refresh Permissions</span>
+								</a></div>
+								<div class="m-t sm-m-t-0 col-12 sm-col-5 col"><div class="text-secondary">Messenger platform can unexpectedly drop page permissions on admin password change or due to their internal reasons. In case of any trouble with content sending or service setup, we recommend you to refresh permissions.</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row" style="margin-bottom: 0px;">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-12 container-hover" style="height:calc(100vh - (45px + 18px));overflow:scroll;">
+			<div class="panel panel-default" style="margin-top: 15px;">
+				<div class="panel-heading">
+					<img class="nav-menu-icon" src="{% print(static_url) %}/images/json.png" />
+					{{CONFIGURATION_PAGES_PUBLISHING}}
+				</div>
+				<div class="panel-body">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="pages">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

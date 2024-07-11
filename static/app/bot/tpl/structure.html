@@ -1,0 +1,56 @@
+<div class="col-md-4" id="bot-structure-column-left"
+	style="overflow-y: auto;min-height: calc(100vh - (45px + 18px));max-height: calc(100vh - (45px + 18px));">
+	<button class="btn btn-danger" id="create_groups" style="margin: 10px 0px 10px 0px;">
+		<i class="fas fa-plus"></i> {{ADD_SEQUENCE_OR_GROUP}}</button>
+	<div class="accordion" id="groups-container"></div>
+</div>
+
+<div class="col-md-8" id="bot-structure-column-right"
+	style="overflow-y: scroll;min-height: calc(100vh - (45px + 18px));max-height: calc(100vh - (45px + 18px));">
+	<div id="card-area" style="display:none">
+		<div id="cards-tool" data-block-id="">
+			<div class="row" style="margin: 5px 0px 0px 0px;" id="block-tools">
+				<div class="col-md-11 col-xs-10 padding-lr-0">
+					<div class="col-md-6 col-xs-10 padding-lr-0">
+						<input id="block-tool" class="mod-item-name form-control" spellcheck="false" dir="auto"
+							style="margin-top: 2px;" />
+					</div>
+					<div class="col-md-6 col-xs-2 padding-lr-0">
+						<!-- <i class="fas fa-link" id="reference-link" style="font-size: 19px; margin: 7.4px 10px;"></i> -->
+						<span class="glyphicon glyphicon-link ref-link" id="reference-link" style="margin-left: 10px; float: left;"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr style="margin-top: 0px;margin-bottom: 13px;">
+		<div class="row">
+			<div id="cards-container"></div>
+		</div>
+		<div class="row">
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+							<ul class="nav navbar-nav">
+								<li><a href="javascript:void(0);" id="create_card_text" data-card-type="text">{{TEXT_CARD}}</a></li>
+								<li><a href="javascript:void(0);" id="create_card_image" data-card-type="image">{{IMAGE_CARD}}</a></li>
+								<li><a href="javascript:void(0);" id="create_generic_card" data-card-type="generic">{{GENERIC_CARD}}</a></li>
+								<li><a href="javascript:void(0);" id="create_card_quickreply" data-card-type="quickreply">{{QUICK_REPLY_CARD}}</a></li>
+								<li><a href="javascript:void(0);" id="create_card_contactinput" data-card-type="contactinput">{{USER_INPUT_CARD}}</a></li>
+								<li><a href="javascript:void(0);" id="create_card_gotoblock" data-card-type="gotoblock">{{GO_TO_BLOCK}}</a></li>
+								<li><a href="javascript:void(0);" id="create_card_email" data-card-type="email">{{EMAIL_CARD}}</a>
+								<li><a href="javascript:void(0);" id="create_card_userattribute" data-card-type="set_user_attribute">{{SETUP_USER_ATTR_CARD}}</a></li>
+								<li><a href="javascript:void(0);" id="create_card_jsonapi" data-card-type="jsonapi">{{JSON_API_CARD}}</a></li>
+								<li><a href="javascript:void(0);" id="create_card_typing" data-card-type="typing">{{TYPING_CARD}}</a></li>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</div>
+
+
+</div>
+

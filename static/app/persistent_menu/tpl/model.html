@@ -1,0 +1,53 @@
+<div class="container-hover"
+	style="width: 355px; min-height: calc(100vh - (46px + 15px)); float: left; position: relative;">
+	<div class="panel panel-default" style="margin-top: 30px;">
+		<div class="panel-heading">
+			<h4 style="margin: 2px 0px;">Persistent Menu</h4>
+			<button class="btn btn-sm btn-warning" id="btn_apply_persistent_menu" style="position: absolute; right: 15px; top: 38px;">
+				<i class="fas fa-check"></i> Áp dụng
+			</button>
+		</div>
+		<div class="panel-body">
+			<div class="" style="opacity: 0.4;text-align: justify;">
+				{{PERSISTENT_MENU_DESC}}
+			</div>
+			<div>
+				<div id="buttons-container"></div>
+				<button class="btn btn-primary" id="add_button" style="width:100%">
+					<span style="color: #fff; cursor: pointer;" class="fa fa-plus"></span>
+					{{PERSISTENT_MENU_ADD_BTN}}</button>
+			</div>
+		</div>
+	</div>
+	<!-- <div class="col-md-4"></div> -->
+</div>
+<div style="position: relative; float: left; overflow: hidden;" id="persistent-review">
+	<img src="{{static_url}}/images/iphone.png" style="height: 555px; width: auto;" title="" />
+	<div class="messenger-review"
+		style="position: absolute; height: 398px; width: 226px;background: white;bottom: 80px;left:172px;z-index:2;color: #333;">
+		<div style="width: 100%; height: 100%; position: relative;">
+			<div id="page-info-space" style="width:450px; float:left; padding: 2px;">
+				<div style="width: 20px;float: left;line-height: 44px;">
+				</div>
+				<div
+					style="width:35px;height:35px;margin-left:5px;float:left;overflow: hidden;border-radius:50%;border:1px solid lightgray;">
+					<img class="page-image" alt="" src="" style="height:100%;">
+				</div>
+				<div style="float: left;padding: 2px 8px;">
+					<div id="page-name" class="ellipsis-158"
+						style="width: 100%;font-weight:500;margin:0px;line-height: 16px;font-size: 13px;"> </div>
+					<div style="color:lightgray;font-weight:200;font-size:11px;">Typically replies in min...</span>
+					</div>
+				</div>
+				<div
+					style="position: absolute; width: 100%; bottom: 0px; padding: 5px 5px;border-top: 1px solid lightgray;">
+					<input type="text" placeholder="Send a message..."
+						style="width: 100%;border-radius: 13px;border: 1px solid lightgray;height: 28px;padding: 5px 8px;background-color: #f6f6f6;font-size: 13px;font-weight: 254;"
+						disabled>
+					<div class="button-review" style="width: 100%;">
+						<div style="width: 100%; padding: 3px 5px;font-weight: 300;">Get Start</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>

@@ -1,0 +1,75 @@
+{
+    "id": {
+        "type": "string",
+        "primary": true
+    },
+    "contact_name": {
+        "type": "string",
+        "length": 255
+    },
+    "user_id": {
+        "type": "string",
+        "required": true
+    },
+    "gender": {
+        "type": "string"
+    },
+    "email": {
+        "type": "string",
+        "length": 100
+    },
+    "phone": {
+        "type": "string",
+        "length": 50
+    },
+    "facebook_id": {
+        "type": "string"
+    },
+    "bot": {
+        "type": "dict"
+    },
+    "page": {
+        "type": "dict"
+    },
+    "user_defined_variable": {
+        "type": "list"
+    },
+    "reachable": {
+        "type": "boolean"
+    },
+    "last_read": {
+        "type": "number"
+    },
+    "last_sent": {
+        "type": "number"
+    },
+    "last_seen": {
+        "type": "number"
+    },
+    "locale": {
+        "type": "string"
+    },
+    "source": {
+        "type": "string"
+    },
+    "attributes": {
+        "type": "string"
+    },
+    "created_at": {
+        "type": "datetime"
+    },
+    "deleted": {
+        "type": "boolean",
+        "default": false
+    },
+    "deleted_at": {
+        "type": "datetime"
+    },
+    "deleted_by": {
+        "type": "string"
+    },
+    "active": {
+        "type": "boolean",
+        "default": true
+    }
+}

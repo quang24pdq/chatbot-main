@@ -1,0 +1,32 @@
+<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 bot-list-item" id="bot_{{_id}}" data-id="{{_id}}">
+	<div class="btn-options" id="btn_options">
+		<span id="btn_options" class="fa fa-ellipsis-h clone-bot-dropdown"></span>
+		<div class="dropdown_block">
+			<div id="options_dropdown" class="dropdown-content dropdown-menu bot-dropdown-options">
+			  <a href="javascript:void(0)" class="dropdown-item" id="clone_bot"><span class="fa fa-copy" aria-hidden="true"></span> {{COPY}}</a>
+			  <a href="javascript:void(0)" class="dropdown-item" id="rename_bot"><span class="fa fa-edit" aria-hidden="true"></span> {{RENAME}}</a>
+			  <a href="javascript:void(0)" class="dropdown-item" id="delete_bot"><span class="fa fa-trash" aria-hidden="true"></span> {{DELETE}}</a>
+			</div>
+		  </div>
+	</div>
+	<div class="bot-tile">
+		<a href='javascript:void(0);' class="" onclick='javascript:gonrinApp().getRouter().navigate("bot/model?id={{_id}}")'>
+			<div style="height: auto; width: 100%;">
+				<div class="image-container">
+					<div class="bot-tile-image-container" style="background-image: url({{page_profile_pic}})"></div>
+				</div>
+				<div class="text-container">
+					<div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 3; word-wrap: break-word; word-break: break-word; color: #333;">
+						<div class="ellipsis-300">{{name}}</div>
+					</div>
+				</div>
+			</div>
+		</a>
+		<div class="sub-text-container">
+			<div class=""
+				style="overflow: hidden; width: 100%; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2; word-wrap: break-word; word-break: break-word;">
+				{{CONNECTION_STATUS}}
+			</div>
+		</div>
+	</div>
+</div>

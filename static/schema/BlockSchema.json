@@ -1,0 +1,46 @@
+{
+    "_id": {
+        "type": "string",
+        "primary": true
+    },
+    "id": {
+        "type": "string"
+    },
+    "name": {
+        "type": "string"
+    },
+    "type": {
+    	"type": "string",
+    	"default": "structure"
+    },
+    "position": {
+    	"type": "number"
+    },
+    "default": {
+        "type": "boolean",
+        "default": false
+    },
+    "bot_id": {
+        "type": "string"
+    },
+    "group_id": {
+        "type": "string"
+    },
+    "broadcast_id": {
+        "type": "string"
+    },
+    "broadcast_options": {
+    	"type": "dict"
+    },
+    "active": {
+        "type": "boolean",
+        "default": true
+    },
+    "ref_link": {
+        "type": "dict",
+        "default": {
+            "active": false,
+            "param": ""
+        }
+    }
+}

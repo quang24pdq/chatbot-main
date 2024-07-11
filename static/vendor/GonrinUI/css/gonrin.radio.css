@@ -1,0 +1,7 @@
+li.radio-option {
+	cursor:pointer;
+}
+
+li.radio-option input {
+	margin-right: 3pt;
+}

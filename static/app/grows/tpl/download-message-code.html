@@ -1,0 +1,29 @@
+<div>
+    <div class="qr-header">
+        <div class="link-to-customer-chat-settings_header">{{QR_CODE_TITLE}}</div>
+    </div>
+    <div class="qr-body" style="margin-top: 20px">
+        <div class="row form-group">
+            <div class="col-sm-offset-3 col-xs-3" style="margin: 8px">
+                <div class="text-gray">{{QR_CODE_SIZE}} </div>
+            </div>
+            <div class="col-xs-8">
+                <input type="text" class="form-control" data-bind="value:image_size" />
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col-sm-offset-3 col-xs-3" style="margin: 8px">
+                <div class="text-gray">{{QR_CODE_REF}}</div>
+            </div>
+            <div class="col-xs-8">
+                <input type="text" id="ref" class="form-control" data-bind="value:ref" />
+            </div>
+        </div>
+        <div class="row" style="margin-top: 20px;">
+            <div class="col-xs-12 text-right">
+                <button id="qr-cancel" class="btn btn-default">{{CANCEL}}</button>
+                <button id="download-png" class="btn btn-primary">{{GENERATE}}</button>
+            </div>
+        </div>
+    </div>
+</div>

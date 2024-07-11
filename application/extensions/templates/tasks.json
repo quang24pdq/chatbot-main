@@ -1,0 +1,35 @@
+[
+    {
+        "_id": 1,
+        "name": "Tạo BOT đầu tiên",
+        "data": [
+            {
+                "title": "Chọn lĩnh vực",
+                "description": "Vui lòng chọn lĩnh vực để Chat BOT phục vụ tốt nhất cho bạn",
+                "image": "",
+                "url": "",
+                "position": 1
+            },
+            {
+                "title": "Kết nối Facebook Page",
+                "description": "Kết nối với Page để bắt đầu sử dụng",
+                "image": "",
+                "url": "",
+                "position": 2
+            }
+        ]
+    },
+    {
+        "_id": 2,
+        "name": "Xem hướng dẫn sử dụng",
+        "data": [
+            {
+                "title": "",
+                "description": "",
+                "image": "",
+                "url": "",
+                "position": 1
+            }
+        ]
+    }
+]

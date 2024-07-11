@@ -1,0 +1,56 @@
+<div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="border-gradient-round-27">
+                    <div class="border-gradient-round-container">
+                    </div>
+                </div>
+                <div style="margin-left: 28px; font-weight: 550;">
+                    <div style="float: left;">
+                        {{TEXT_CARD}}
+                    </div>
+                    <div style=" text-align: right;">
+                        <button class="btn mr-1"
+                            style=" padding: 0px 6px; border-radius: 2px; background-color: #e7ebef; color: #949494;">
+                            <i class="fas fa-expand-arrows-alt"></i>
+                        </button>
+                        <button class="btn mr-1 delete_card"
+                            style=" padding: 0px 6px; border-radius: 2px; background-color: #e7ebef; color: #f35f5f;">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-body">
+                <div style="height: 337px;">
+                    <textarea rows="5" style="height: 140px;" card-text-bind="value:text"></textarea>
+                    <hr />
+                    <div class="buttons-container"></div>
+                    <button class="btn btn-primary add_button" style="width:100%">
+                        <span style="color: #fff; cursor: pointer;" class="fa fa-plus"></span> {{TEXT_CARD_ADD_BTN}}
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="deletebtn">
+            <a type="button" class="btn btn-link fa-inverse add_property" title="{{TEXT_CARD_ADD_PROPERTY}}"
+                style="padding: 6px 0px;">
+                <span class="fa fa-user-plus"></span>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                    <ul class="col-lg-12 col-xs-12 dropdown-menu attribute_suggestion_list"
+                        style="max-height: 350px; min-width: 200px; overflow: scroll;"></ul>
+                </div>
+            </a>
+            <a type="button" class="btn btn-link fa-inverse up_card_position" style="padding: 6px 0px;">
+                <span class="glyphicon glyphicon-arrow-up"></span>
+            </a>
+            <a type="button" class="btn btn-link fa-inverse down_card_position" style="padding: 6px 0px;">
+                <span class="glyphicon glyphicon-arrow-down"></span>
+            </a>
+            <a type="button" class="btn btn-link fa-inverse delete_card" title="Delete this card">
+                <span class="glyphicon glyphicon-trash remove"></span>
+            </a>
+        </div>
+    </div>
+</div>

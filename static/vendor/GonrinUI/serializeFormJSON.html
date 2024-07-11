@@ -1,0 +1,46 @@
+<html>
+<head>
+	<script src="js/jquery.js"></script>   
+	<script src="vendor/bootstrap/js/bootstrap.js"></script>
+	<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+		<!-- Optional theme -->
+	<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap-theme.min.css">
+    
+    <script src="js/gonrin.core.js"></script>
+</head>
+<body>
+	<form id="formid" action="#" method="post">
+	    <div>
+	        <label for="name">Name</label>
+	        <input type="text" name="name" id="name" />
+	    </div>
+	    <div>
+	        <label for="email">Email</label>
+	        <input type="text" name="email" id="email" />
+	    </div>
+	    <div>
+	        <label for="password">Password</label>
+	        <input type="password" name="password" id="password" />
+	    </div>
+	    <p>
+	        <button id="btn" type="button" >Sent</button>
+	    </p>
+	</form>
+	<script>
+		$(document).ready(function(){
+			
+			$('#btn').click(function (e) {
+			    e.preventDefault();
+			    var data = gonrin.serializeFormJSON($('#formid'));
+			    console.log(data);
+
+			    /* Object
+			        email: "value"
+			        name: "value"
+			        password: "value"
+			     */
+			});
+		});
+	</script>
+</body>
+</html>

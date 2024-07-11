@@ -1,0 +1,19 @@
+{
+	"business_lines": [
+		{ "value": "restaurant", "vi": "Nhà hàng", "en": "Restaurant" },
+		{ "value": "cafe", "vi": "Cửa hàng Cafe", "en": "Coffee Shop" },
+		{ "value": "spa", "vi": "Spa/Beauty", "en": "Spa/Beauty" },
+		{ "value": "clothes_shop", "vi": "Cửa hàng quần áo", "en": "Clothes Shop" },
+		{ "value": "education", "vi": "Giáo dục", "en": "Education" }
+	],
+	"bot_templates": [
+		{
+			"id": "kieuhoaquan",
+			"name": "Nhà hàng Kiều Hoa Quán",
+			"icon": "https://static.upgo.vn/upload/accounts/235789529801577788739006.JPG",
+			"thumbnail": "https://static.upgo.vn/upload/accounts/235789529801577788739006.JPG",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, facilis quo. Maiores magnam modi ab libero praesentium blanditiis consequatur aspernatur accusantium maxime molestiae sunt ipsa.",
+			"powered_by": "UpGO"
+		}
+	]
+}

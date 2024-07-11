@@ -1,0 +1,27 @@
+{
+    "_id": {
+        "type": "string"
+    },
+    "name": {
+        "type": "string",
+        "default": "textarea"
+    },
+    "attribute": {
+        "type": "string"
+    },
+    "rows": {
+        "type": "number"
+    },
+    "placeholder": {
+        "type": "string"
+    },
+    "color": {
+        "type": "string"
+    },
+    "style_class": {
+        "type": "string"
+    },
+    "position": {
+        "type": "number"
+    }
+}

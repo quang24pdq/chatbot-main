@@ -1,0 +1,15 @@
+{
+    "_id": {
+        "type": "string",
+        "primary": true
+    },
+    "bot_id": {
+        "type": "string"
+    },
+    "buttons": {
+        "type": "list"
+    },
+    "active": {
+        "type": "boolean"
+    }
+}

@@ -1,0 +1,74 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<script src="js/jquery.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.js"></script>
+	<link rel="stylesheet" href="vendor/bootstrap3/css/bootstrap.min.css">
+		<!-- Optional theme -->
+	<link rel="stylesheet" href="vendor/bootstrap3/css/bootstrap-theme.min.css">
+	
+	<link rel="stylesheet" href="css/gonrin.checkbox.css">
+	
+	<style>
+		.yeallow{background-color: #FFF34F}
+	</style>
+	<script src="js/gonrin.core.js"></script>
+	<script src="js/gonrin.checkbox.js"></script>
+
+	<script type="text/javascript">
+            $(function () {
+            	var checkbox = $('#checkbox').checkbox({
+            		checkedField: "name",
+                    valueField: "id",
+                    cssClassField: "cssClass",
+                    dataSource: [
+                                 { name: true, id: 1, cssClass: "yeallow" },
+                                 { name: false, id: 5 },
+                    ],
+                    value: 1
+            	});
+            	
+            	$("button#setval").bind("click", function(){
+            		checkbox.data("gonrin").setValue(5);
+            	});
+            	
+            	$('#checkbox').on('change.gonrin', function(e){
+            		console.log("on change");
+                	console.log($('#checkbox').data('gonrin').getValue());
+                });
+            	
+            	$('#checkbox2').checkbox({
+            		checkedField: "name",
+                    valueField: "id",
+                    dataSource: [
+                                 { name: true, id: 1 },
+                                 { name: false, id: 3 },
+                    ],
+                    index: 1,
+            	});
+            	
+            	
+                
+            });
+     </script>
+</head>
+<body>
+	 <div class="container">
+	    <div class="row-fluid" id="content" style="margin-top:20px;">
+	    	<div style="width:100%">
+	    		<div style="width:50%;">
+					<input type='text' id='checkbox' value="5"/>
+				</div>
+				<button id="setval">Set Value</button>
+				<hr>
+				<div style="width:50%;">
+					<input type='text' id='checkbox2' />
+				</div>
+			</div>
+			<br/>
+			
+	    </div> 
+	</div>
+</body>
+</html>

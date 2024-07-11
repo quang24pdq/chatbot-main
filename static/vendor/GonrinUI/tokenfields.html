@@ -1,0 +1,67 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<script src="js/jquery.js"></script>
+	<script src="vendor/bootstrap3/js/bootstrap.js"></script>
+	<link rel="stylesheet" href="vendor/bootstrap3/css/bootstrap.min.css">
+		<!-- Optional theme -->
+	<link rel="stylesheet" href="vendor/bootstrap3/css/bootstrap-theme.min.css">
+	
+	<script src="js/gonrin.core.js"></script>
+	<link rel="stylesheet" href="css/gonrin.tokenfield.css">
+	<script src="js/gonrin.tokenfield.js"></script>
+
+	<script type="text/javascript">
+            $(function () {
+            	$('#tokenfield')
+
+            	  .on('tokenfield:createtoken', function (e) {
+            	    var data = e.attrs.value.split('|')
+            	    e.attrs.value = data[1] || data[0]
+            	    e.attrs.label = data[1] ? data[0] + ' (' + data[1] + ')' : data[0]
+            	  })
+
+            	  .on('tokenfield:createdtoken', function (e) {
+            	    // Über-simplistic e-mail validation
+            	    var re = /\S+@\S+\.\S+/
+            	    var valid = re.test(e.attrs.value)
+            	    if (!valid) {
+            	      $(e.relatedTarget).addClass('invalid')
+            	    };
+            	    console.log("created tokens");
+            	    console.log(e);
+            	    console.log($(e.target).tokenfield('getTokens'));
+            	    
+            	  })
+
+            	  .on('tokenfield:edittoken', function (e) {
+            	    if (e.attrs.label !== e.attrs.value) {
+            	      var label = e.attrs.label.split(' (')
+            	      e.attrs.value = label[0] + '|' + e.attrs.value
+            	    }
+            	  })
+
+            	  .on('tokenfield:removedtoken', function (e) {
+            	    alert('Token removed! Token value was: ' + e.attrs.value)
+            	  })
+
+            	  .tokenfield();
+                
+            });
+     </script>
+</head>
+<body>
+	 <div class="container">
+	    <div class="row-fluid" id="content" style="margin-top:20px;">
+	    	<div style="width:100%">
+	    		<div style="width:50%;">
+					<input type="text" class="form-control" id="tokenfield" />
+				</div>
+			</div>
+			<br/>
+			
+	    </div> 
+	</div>
+</body>
+</html>

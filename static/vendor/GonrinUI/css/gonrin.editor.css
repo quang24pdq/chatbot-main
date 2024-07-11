@@ -1,0 +1,26 @@
+.gonrinEditorMain {border:1px solid #999; padding:0 1px 1px; background-color:white}
+.gonrinEditorMain,
+.gonrinEditorPopup,
+.gonrinEditorMain * {-moz-box-sizing:content-box; -webkit-box-sizing:content-box; box-sizing:content-box}
+.gonrinEditorMain iframe {border:none; margin:0; padding:0}
+.gonrinEditorMain textarea {overflow-y:scroll; font:10pt Arial,Verdana; resize:none; outline:none}
+.gonrinEditorToolbar {background: url('../images/toolbar.gif') repeat}
+.gonrinEditorGroup {float:left; height:26px}
+.gonrinEditorButton {float:left; width:24px; height:24px; margin:1px 0 1px 0; background: url('../images/buttons.gif')}
+.gonrinEditorDisabled {opacity:0.3; filter:alpha(opacity=30)}
+.gonrinEditorDivider {float:left; width:1px; height:23px; margin:1px 0 1px 0; background:#CCC}
+.gonrinEditorPopup {border:solid 1px #999; background-color:white; color:#333333; position:absolute; font:10pt Arial,Verdana; cursor:default; z-index:10000}
+.gonrinEditorList div {padding:2px 4px 2px 4px}
+.gonrinEditorList p,
+.gonrinEditorList h1,
+.gonrinEditorList h2,
+.gonrinEditorList h3,
+.gonrinEditorList h4,
+.gonrinEditorList h5,
+.gonrinEditorList h6,
+.gonrinEditorList font {padding:0; margin:0; background-color:Transparent}
+.gonrinEditorColor {width:150px; padding:1px 0 0 1px}
+.gonrinEditorColor div {float:left; width:14px; height:14px; margin:0 1px 1px 0}
+.gonrinEditorPrompt {background-color:#F6F7F9; padding:8px; font-size:8.5pt}
+.gonrinEditorPrompt label {padding-bottom:8px}
+.gonrinEditorMsg {background-color:#FDFCEE; width:150px; padding:4px; font-size:8.5pt}

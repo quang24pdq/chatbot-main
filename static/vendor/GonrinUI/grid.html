@@ -1,0 +1,278 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<script src="js/jquery.js"></script>
+	<script src="vendor/bootstrap3/js/bootstrap.js"></script>
+	<link rel="stylesheet" href="vendor/bootstrap3/css/bootstrap.min.css">
+		<!-- Optional theme -->
+	<link rel="stylesheet" href="vendor/bootstrap3/css/bootstrap-theme.min.css">
+
+	<script src="js/gonrin.core.js"></script>
+	<script src="js/gonrin.query.js"></script>
+	<script src="js/gonrin.pagination.js"></script>
+	<script src="js/gonrin.grid.js"></script>
+
+	<script type="text/javascript">
+            $(function () {
+                $("#grid").grid({
+                	showSortingIndicator: true,
+                	onValidateError: function(){
+                		alert("eror");
+                	},
+                	orderByMode: "client",
+                	tools:[
+      	                 {
+      	                	 name: "create",
+      	                	 buttonClass:"btn-success",
+      	                	 label: "Tạo mới",
+      	                	 command: "create"
+      	                 }
+	                 ],
+                	fields: [
+                	     {
+                	    	 field: "command", 
+                	    	 label:"Command",
+                	    	 width:"50px", 
+                	    	 /*menu: {
+                	    		 	label: "context menu",
+                	    		 	"class": "btn-primary btn-xs",
+                	    		 	command: [
+                	      	    	     {
+                	      	    	    	 "label":"Sample Comand",
+                	      	    	    	 "action": function(params){
+                	      	    	    		 console.log(params);
+                	      	    	    	 }
+                	      	    	     }  
+                	      	    	 ]
+                	    	 	 },*/
+                	       
+                	    	 command: [
+                	    	     {"label":"Delete",
+                	    	        	"action": "delete",
+                	    	        	"class": "btn-sm",
+                	    	     },
+                	    	     {
+                	    	       "label":"Custom function",
+                   	    	        "action": function(params, args){
+                   	    	        	console.log(params);
+                   	    	        	console.log(args);
+                   	    	        	$("#grid").data('gonrin').deleteRow(params.el);
+                   	    	        },
+                   	    	        "args": {"anme": "Nam abc"},
+                   	    	        "class": "btn-primary btn-sm"
+                   	    	     },   
+                	    	 ],
+                	   	 },
+                         {field: "id", label: "Code", visible: true, width:"250px", sortable: {order:"asc"}},
+                         {
+                        	 field: "name", 
+                        	 label: 'Ten',
+                             template: '<a href="http://abc.com/{{ id }}"><img src="http://img.abc.com/{{ id }}"><span>{{ name }}</span></a></span>',
+                    
+                         },
+                         {field: "address", label: "Dia Chi", visible: true, "sortable": {order:"desc"}},
+                         { field: "age",
+                             groupable: false,
+                             aggregates: [ "count", "min", "max" ],
+                             groupFooterTemplate: "age total: #: count #, min: #: min #, max: #: max #",
+                             sortable:{
+                            	 order: "asc",
+                            	 compare: function(a, b) {
+                                     return a - b;
+                                 },
+                             }
+                         },
+                         {
+                        	 field: "order_id", 
+                        	 label: "Order",
+                        	 foreign: "order",
+                        	 foreignValueField: "id",
+                        	 foreignTextField: "code",
+                       	 },
+                       	 {
+                        	 field: "company", 
+                        	 label: "Company",
+                        	 foreignValues: [
+                        	     {value2: 1, text: "FPT GMC"},
+                        	     {value2: 2, text: "FIS"},
+                        	     {value2: 3, text: "Gonrin Inc"},
+                        	 ],
+                        	 foreignValueField: "value2",
+                        	 foreignTextField: "text",
+                       	 },
+                     ],
+                     /*orderBy:[
+                     	{
+                     		field: "age",
+                     		direction: "asc",
+                     		compare: function(a, b) {
+                            	return a - b;
+                        	}
+                     	},
+                     ],*/
+                     dataSource: [
+                         {
+                        	 id:1,name:"ABC", 
+                        	 address: "22 Huynh thuc khang", 
+                        	 age: 30, 
+                        	 order_id: 1,
+                        	 order: {
+                        	        "code": "01A", 
+                        	        "datetime": "2016-02-15T12:00:00", 
+                        	        "id": 1, 
+                        	 },
+                        	 company: 3
+                         },
+                         {id:2,name:"CDE", address: "33 Huynh thuc khang", age: 40},
+                         {id:3,name:"XYZ", address: "abc dhyas 1873", age:25},
+                         {id:4,name:"ABC1", address: "223 Huynh thuc khang", age: 40},
+                         {id:5,name:"CDE1", address: "333 Huynh thuc khang", age : 47},
+                         {id:6,name:"XYZ1", address: "abc3 dhyas 1873", age: 22},
+                         
+                         {id:7,name:"ABC", address: "22 Huynh thuc khang", age: 30},
+                         {id:8,name:"CDE", address: "33 Huynh thuc khang", age: 40},
+                         {id:9,name:"XYZ", address: "abc dhyas 1873", age:25},
+                         {id:10,name:"ABC1", address: "223 Huynh thuc khang", age: 40},
+                         {id:11,name:"CDE1", address: "333 Huynh thuc khang", age : 47},
+                         {id:12,name:"XYZ1", address: "abc3 dhyas 1873", age: 22},
+                         
+                         {id:13,name:"ABC", address: "22 Huynh thuc khang", age: 30},
+                         {id:14,name:"CDE", address: "33 Huynh thuc khang", age: 40},
+                         {id:15,name:"XYZ", address: "abc dhyas 1873", age:25},
+                         {id:16,name:"ABC1", address: "223 Huynh thuc khang", age: 40},
+                         {id:17,name:"CDE1", address: "333 Huynh thuc khang", age : 47},
+                         {id:18,name:"XYZ1", address: "abc3 dhyas 1873", age: 22},
+                         {id:19,name:"XYZ1", address: "abc3 dhyas 1873", age: 22},
+                         {id:20,name:"XYZ1", address: "abc3 dhyas 1873", age: 22},
+                         
+                         
+                         {id:21,name:"ABC", address: "22 Huynh thuc khang", age: 30},
+                         {id:22,name:"CDE", address: "33 Huynh thuc khang", age: 40},
+                         {id:23,name:"XYZ", address: "abc dhyas 1873", age:25},
+                         {id:24,name:"ABC1", address: "223 Huynh thuc khang", age: 40},
+                         {id:25,name:"CDE1", address: "333 Huynh thuc khang", age : 47},
+                         {id:26,name:"XYZ1", address: "abc3 dhyas 1873", age: 22},
+                         
+                         {id:27,name:"ABC", address: "22 Huynh thuc khang", age: 30},
+                         {id:28,name:"CDE", address: "33 Huynh thuc khang", age: 40},
+                         {id:29,name:"XYZ", address: "abc dhyas 1873", age:25},
+                         {id:30,name:"ABC1", address: "223 Huynh thuc khang", age: 40},
+                         {id:31,name:"CDE1", address: "333 Huynh thuc khang", age : 47},
+                         {id:32,name:"XYZ1", address: "abc3 dhyas 1873", age: 22},
+                         
+                         {id:33,name:"ABC", address: "22 Huynh thuc khang", age: 30},
+                         {id:34,name:"CDE", address: "33 Huynh thuc khang", age: 40},
+                         {id:35,name:"XYZ", address: "abc dhyas 1873", age:25},
+                         {id:36,name:"ABC1", address: "223 Huynh thuc khang", age: 40},
+                         {id:37,name:"CDE1", address: "333 Huynh thuc khang", age : 47},
+                         {id:38,name:"XYZ1", address: "abc3 dhyas 1873", age: 22},
+                         {id:39,name:"XYZ1", address: "abc3 dhyas 1873", age: 22},
+                     ],
+                     primaryField:"id",
+                     selectionMode: "multiple",
+                     rowClass: function(data){
+                    	 if(data.name === "ABC"){
+                    		 return "Green";
+                    	 }
+                    	 if(data.name === "XYZ"){
+                    		 return "Blue";
+                    	 }
+                     },
+                     /*filters: {
+                         id: {$gt:3}
+                     },*/
+                     pagination: {
+                     	page: 1,
+                     	pageSize: 3
+                     },
+                     selectedItems:[
+						{id:4,name:"ABC1", address: "223 Huynh thuc khang", age: 40},
+						{id:21,name:"ABC", address: "22 Huynh thuc khang", age: 30},
+                     ],
+                     /*onRowClick: function(e){
+                    	 console.log(e);
+                     },*/
+                     events:{
+                   		 "rowclick": function(e){
+                   			 console.log(e);
+                   		 },
+                   		//"rowdblclick": function(e){
+                  		//	 console.log(e);
+                  		 //},
+                   		 "rowcontextmenu": function(e){
+                   			console.log(e);
+                   			return false;
+                   		 },
+                   	 
+                   		 "celldblclick": function(e){
+                   			console.log(e);
+                   		 },
+                   		 "cellcontextmenu": function(e){
+                   			console.log(e);	 
+                    	 }
+                     },
+                     
+                     /* onRendered: function(e){
+                    	 console.log(e)
+                     } */
+                });
+                
+                $("#grid").on("rowclick", function(e){
+                	console.log(e);
+                });
+                
+                
+                $("#filter").bind("click", function(){
+                	var ftext = $('#filter_text').val();
+                	$('#grid').data('gonrin').filter({
+                        //id: {$gt:25}
+                		address: {$like: ftext}
+                    });
+                });
+                
+               
+                var dataqe = [
+                            {id:1,name:"ABC", address: "22 Huynh thuc khang"},
+                            {id:2,name:"CDE", address: "33 Huynh thuc khang"},
+                            {id:3,name:"XYZ", address: "abc dhyas 1873"},
+                            {id:4,name:"ABC1", address: "223 Huynh thuc khang"},
+                            {id:5,name:"CDE1", address: "333 Huynh thuc khang"},
+                            {id:6,name:"XYZ1", address: "abc3 dhyas 1873"},
+                        ];
+                
+                var ret = gonrin.query( dataqe, {
+                    //featured:true, 
+                    id: {$gt:3}
+                });
+                //console.log(ret);
+                
+                
+                $("#set_source").bind("click", function(){
+                	console.log("setwource");
+                	/* $('#grid').data('gonrin').filter({
+                        //id: {$gt:25}
+                		address: {$like: ftext}
+                    }); */
+                    
+                	$('#grid').data('gonrin').setDataSource(dataqe);
+                    
+                	var abc = $('#grid').data('gonrin').selectedRows("get_ids");
+                	
+                	console.log("selected item", abc);
+                });
+            });
+     </script>
+</head>
+<body>
+	 <div class="container">
+	    <div class="row-fluid" id="content" style="margin-top:20px;">
+	    	<div id="grid"></div>
+	    </div> 
+	</div>
+	<input type="text" id="filter_text"/>
+	<button id="filter">Filter</button>
+	<br/>
+	<button id="set_source">Set Data Source</button>
+</body>
+</html>

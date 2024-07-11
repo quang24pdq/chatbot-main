@@ -1,0 +1,18 @@
+{
+    "tenant_id": "Mã thương hiệu",
+    "tenant_name": "Tên thương hiệu",
+    "page_id": "ID trang",
+    "page_name": "Tên trang",
+    "name": "Tên đầy đủ",
+    "first_name": "Tên",
+    "last_name": "Họ",
+    "gender": "Giới tính",
+    "phone": "Số điện thoại",
+    "booking_flag": "Phát hiện đặt bàn",
+    "booking_for_people_number": "Số người đặt bàn",
+    "booking_time": "Thời gian đặt bàn",
+    "booking_requirements": "Yêu cầu đặt bàn",
+    "profile_pic": "Ảnh đại diện",
+    "locale": "Vùng miền",
+    "timezone": "Múi giờ"
+}

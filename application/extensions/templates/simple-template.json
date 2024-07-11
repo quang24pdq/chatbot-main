@@ -1,0 +1,96 @@
+{
+    "structure": {
+        "group": {
+            "_id": null,
+            "type": "group",
+            "name": "",
+            "position": "{{timestamp}}",
+            "bot_id": "{{bot_id}}",
+            "active": true,
+            "tenant_id": "{{tenant_id}}",
+            "created_at": "{{timestamp}}",
+            "updated_at": "{{timestamp}}",
+            "blocks": [
+                {
+                    "_id": "5c80959142a316284bb37db4",
+                    "name": "Get Start",
+                    "type": "structure",
+                    "group_id": "{{group_id}}",
+                    "ref_link": {
+                        "active": false,
+                        "param": null
+                    },
+                    "position": "{{timestamp}}",
+                    "cards": [
+                        {
+                            "_id": null,
+                            "text": "Chào {{name}}! Cảm ơn bạn đã liên hệ với {{page_name}}.\nHãy truy cập vào website để trải nghiệm dịch vụ của chúng tôi.",
+                            "buttons": [
+                                {
+                                    "id": null,
+                                    "title": "Website",
+                                    "blocks": [],
+                                    "url": "https://www.upgo.vn",
+                                    "webview_height_ratio": "full",
+                                    "phone_number": null,
+                                    "type": "web_url"
+                                }
+                            ],
+                            "bot_id": "{{bot_id}}",
+                            "block_id": "{{block_id}}",
+                            "type": "text",
+                            "position": "{{timestamp}}",
+                            "tenant_id": "{{tenant_id}}",
+                            "created_at": "{{timestamp}}",
+                            "updated_at": "{{timestamp}}"
+                        }
+                    ]
+                }            
+            ]
+        }
+    },
+    "setup_ai": {
+        "rule": {
+            "_id": null,
+            "bot_id": "{{bot_id}}",
+            "text": [
+                "Xin chào",
+                "Xin chào {{page_name}}",
+                "Hello",
+                "Hi"
+            ],
+            "type": "text",
+            "block": null,
+            "reply_text": "{{page_name}} có thể giúp gì cho bạn ạ?",
+            "deleted_at": null,
+            "deleted_by": null,
+            "active": true,
+            "tenant_id": "{{tenant_id}}",
+            "created_at": "{{timestamp}}",
+            "updated_at": "{{timestamp}}"
+        }
+    },
+    "persistant": {
+        "_id": null,
+        "bot_id": "{{bot_id}}",
+        "buttons": [
+            {
+                "_id": null,
+                "title": "Bắt đầu trò chuyện",
+                "blocks": [
+                    {
+                        "_id": "5c80959142a316284bb37db4",
+                        "name": "Get Start"
+                    }
+                ],
+                "url": null,
+                "webview_height_ratio": null,
+                "phone_number": null,
+                "type": "postback"
+            }
+        ],
+        "active": true,
+        "created_at": "{{timestamp}}",
+        "updated_at": "{{timestamp}}"
+    }
+}

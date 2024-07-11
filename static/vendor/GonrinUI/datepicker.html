@@ -1,0 +1,78 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<script src="js/jquery.js"></script>
+	<script src="js/moment.js"></script>
+
+	<script src="vendor/bootstrap3/js/bootstrap.js"></script>
+	<link rel="stylesheet" href="vendor/bootstrap3/css/bootstrap.min.css">
+		<!-- Optional theme -->
+	<link rel="stylesheet" href="vendor/bootstrap3/css/bootstrap-theme.min.css">
+	
+	<script src="js/gonrin.datetimepicker.js"></script>
+	<link rel="stylesheet" href="css/gonrin.datetimepicker.css">
+	
+	<script type="text/javascript">
+            $(function () {
+                $('#datetime').datetimepicker({
+                	textFormat:'DD-MM-YYYY',
+                	extraFormats:['DDMMYYYY'],
+                	parseInputDate: function(val){
+                		return moment.unix(val)
+                	},
+                	parseOutputDate: function(date){
+                		return date.unix()
+                	}
+                });
+                
+                $('#getvalue').bind('click', function (e) {
+            		var value = $('#datetime').data("gonrin").getValue();
+            		var date = $('#datetime').data("gonrin").getDate();
+            		console.log(value, date);
+				});
+                
+                console.log("datetime value=",$('#datetime').data("gonrin").getValue());
+                
+                $('#datetime2').datetimepicker({
+                	textFormat:'DD-MM-YYYY',
+                	extraFormats:['DDMMYYYY'],
+                });
+                
+            	/* $('#datetime').on('change.gonrin', function (e) {
+				  	console.log(e.date);
+				});*/
+            	$('#setvalue').bind('click', function (e) {
+            		$('#datetime2').data("gonrin").setValue(null);
+				});
+				
+            });
+       </script>
+</head>
+<body>
+	 <div class="container">
+	    <div class="row-fluid" id="content" style="margin-top:20px;">
+
+			<br/>
+			<div style="width:100%">
+	    		<div style="width:50%;">
+					<!-- <input type='text' id='datetime' value='22012016'/>-->
+					<!-- <input type='text' id='datetime' value="1544029200"/>-->
+					<input type='text' id='datetime'/>
+				</div>
+				<br/>
+				<div>
+					<button id="getvalue">Get Value</button>
+				</div>
+				<br/>
+				<div style="width:50%;">
+					<input type='text' id='datetime2'/>
+				</div>
+			</div>
+			<div>
+				<button id="setvalue">Set Null</button>
+			</div>
+	    </div>
+	</div>
+</body>
+</html>

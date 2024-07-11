@@ -1,0 +1,49 @@
+<div class="col-md-6 container-hover" style="margin: 1px;">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="border-gradient-round-27">
+                <div class="border-gradient-round-container" id="position">
+                </div>
+            </div>
+            <div style="margin-left: 28px; font-weight: 550;">
+                {{GENERIC_CARD}}
+            </div>
+        </div>
+        <div class="panel-body">
+            <div>
+                <div class="form-group">
+                    <input type="text" generic-card-bind="value:image_url" />
+                </div>
+                <div class="col-md-12 text-center padding-lr-0">
+                    <img id="image_preview" style="width:100%; text-align:center" src="" style="overflow: hidden;" />
+                </div>
+                <input generic-card-bind="value:title" placeholder="{{GENERIC_CARD_TITLE}}" id="title" />
+                <textarea rows="5" generic-card-bind="value:subtitle"
+                    placeholder="{{GENERIC_CARD_SUBTITLE}}"></textarea>
+                <input type="text" generic-card-bind="value:default_url" placeholder="{{GENERIC_CARD_DEFAULT_URL}}" />
+                <div id="buttons-container"></div>
+                <button class="btn btn-primary" id="add_button" style="width:100%">
+                    <span style="color: #fff; cursor: pointer;" class="fa fa-plus"></span> {{TEXT_CARD_ADD_BTN}}
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="deletebtn">
+        <!-- <a type="button" class="btn btn-link fa-inverse btn-delete" id="add_property" title="{{TEXT_CARD_ADD_PROPERTY}}" style="padding: 6px 0px;">
+                <span class="fa fa-user-plus"></span>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                    <ul class="col-lg-12 col-xs-12 dropdown-menu" id="attribute_suggestion_list"
+                        style="max-height: 350px; min-width: 200px; overflow: scroll;"></ul>
+                </div>
+            </a> -->
+        <a type="button" class="btn btn-link fa-inverse btn-delete" id="up_card_position" style="padding: 6px 0px;">
+            <span class="glyphicon glyphicon-arrow-up"></span>
+        </a>
+        <a type="button" class="btn btn-link fa-inverse btn-delete" id="down_card_position" style="padding: 6px 0px;">
+            <span class="glyphicon glyphicon-arrow-down"></span>
+        </a>
+        <a type="button" class="btn btn-link fa-inverse btn-delete" id="delete_card" title="Delete this card">
+            <span class="glyphicon glyphicon-trash remove"></span>
+        </a>
+    </div>
+</div>

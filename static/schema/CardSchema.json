@@ -1,0 +1,25 @@
+{
+    "_id": {
+        "type": "string",
+        "primary": true
+    },
+    "block_id": {
+        "type": "string"
+    },
+    "broadcast_id": {
+        "type": "string"
+    },
+    "type": {
+        "type": "string"
+    },
+    "configure" : {
+    	"type": "dict"
+    },
+    "position":{
+        "type":"number"
+    },
+    "active": {
+        "type": "boolean",
+        "default": true
+    }
+}

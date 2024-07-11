@@ -1,0 +1,15 @@
+{
+    "_id": {
+        "type": "string"
+    },
+    "name": {
+        "type": "string",
+        "default": "radio"
+    },
+    "fields": {
+        "type": "list"
+    },
+    "position": {
+        "type": "number"
+    }
+}

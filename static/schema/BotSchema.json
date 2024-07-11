@@ -1,0 +1,43 @@
+{
+    "_id": {
+        "type": "string",
+        "primary": true
+    },
+    "token":{
+        "type": "string"
+    },
+    "page_access_token":{
+        "type": "string"
+    },
+    "tenant_id": {
+        "type": "string"
+    },
+    "name": {
+        "type": "string"
+    },
+    "user_ids": {
+        "type": "list"
+    },
+    "page_id": {
+        "type": "string"
+    },
+    "page_name": {
+        "type": "string"
+    },
+    "page_logo": {
+        "type": "string"
+    },
+    "page_profile_pic": {
+        "type": "string"
+    },
+    "user_define_attribute":{
+        "type":"list"
+    },
+    "wit": {
+        "type": "dict"
+    },
+    "active": {
+        "type": "boolean",
+        "default": true
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "_id": {
+        "type": "string"
+    },
+    "name": {
+        "type": "string",
+        "default": "checkbox"
+    },
+    "attribute": {
+        "type": "string"
+    },
+    "limit": {
+        "type": "number"
+    },
+    "fields": {
+        "type": "list"
+    },
+    "position": {
+        "type": "number"
+    }
+}

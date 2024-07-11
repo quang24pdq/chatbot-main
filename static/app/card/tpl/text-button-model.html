@@ -1,0 +1,50 @@
+<div class="dropdown" id="card-button-title">
+	<button id="text-button" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+		style="width:100%; color:#3385ff">
+		<span button-card-text-bind="text:title"></span>
+	</button>
+
+	<div class="dropdown-menu" id="card-button-configure" aria-labelledby="text-button" style="display:none;">
+		<input type="text" style="text-align: center" class="card-button-configure-title" button-card-text-bind="value:title" />
+		<ul class="nav nav-tabs">
+			<li style="width:33%" class="text-center">
+				<button class="btn btn-link btn-sm text-uppercase btn-block" style="padding: 5px 0px;">
+					<i class="fa fa-sitemap"></i> {{PERSISTENT_MENU_BTN_BLOCK}}</button>
+			</li>
+			<li style="width:34%" class="text-center">
+				<button class="btn btn-link btn-sm text-uppercase btn-url" style="padding: 5px 0px;">
+					<i class="fa fa-link"></i> {{PERSISTENT_MENU_BTN_URL}}</button>
+			</li>
+			<li style="width:33%" class="text-center">
+				<button class="btn btn-link btn-sm text-uppercase btn-phone" style="padding: 5px 0px;">
+					<i class="fa fa-phone"></i> Phone</button>
+			</li>
+			<li style="width:25%" class="text-center hide">
+				<button class="btn btn-link btn-sm text-uppercase btn-webview" style="padding: 5px 0px;">
+					<i class="fa fa-wpforms"></i> WebView</button>
+			</li>
+		</ul>
+		<div class="tab-content">
+			<div id="tab-block" style="display:none">
+				<input type="text" button-card-text-bind="list:blocks" />
+			</div>
+			<div id="tab-url" style="display:none">
+				<div style="width: 100%; padding: 7px 0px;">{{WEBVIEW_HEIGHT}}:</div>
+				<button class="compact col-sm-4 btn btn-default"
+					style="border-radius: 0px; border: 0px;"><input type="checkbox" /> 50%</button>
+				<button class="tall col-sm-4 btn btn-default" style="border-radius: 0px; border: 0px;"><input
+						type="checkbox" /> 75%</button>
+				<button class="full col-sm-4 btn btn-default" style="border-radius: 0px; border: 0px;"><input
+						type="checkbox" /> 100%</button>
+				<input type="text" button-card-text-bind="value:url" />
+			</div>
+			<div id="tab-phone" style="display:none">
+				<input type="text" button-card-text-bind="value:phone_number" />
+			</div>
+		</div>
+		<div class="text-center" style="margin-top:5px">
+			<button class="btn btn-sm btn-primary card-button-configure-ok-button">Save</button>
+			<button class="btn btn-sm btn-danger card-button-configure-delete-button">Delete</button>
+		</div>
+	</div>
+</div>

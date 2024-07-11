@@ -1,0 +1,24 @@
+<div class="container-hover">
+    <div class="row form-group">
+        <div class="col-md-5">
+            <input type="text" field-card-userinput-bind="value:text" />
+            <!-- <textarea class="form-control animated" placeholder="What do you want to ask" style="overflow: hidden; overflow-wrap: break-word; resize: horizontal; width:350px;"></textarea> -->
+        </div>
+        <div class="col-md-3">
+            <input type="text" field-card-userinput-bind="value:validation" />
+        </div>
+        <div class="col-md-3">
+            <!-- <input type="text" field-card-userinput-bind="value:attribute" /> -->
+            <input class="form-control" type="text" id="attribute" autocomplete="off">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                <ul class="col-lg-12 col-xs-12 dropdown-menu" id="attribute_suggestion_list"
+                    style="max-height: 350px; min-width: 200px; overflow: scroll;"></ul>
+            </div>
+        </div>
+        <div class="col-md-1">
+            <button type="button" class="close" aria-label="Close">
+                <span aria-hidden="true" class="fa fa-times" style="font-size: 16px; margin-top: 8px;"></span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,87 @@
+<div class="row">
+	<div class="col-lg-12 col-md-12 col-sm-12 col-12 comment-rule-setting">
+		<div class="link-to-customer-chat-settings_header">{{GROW_COMMENT_RULE_TITLE}}</div>
+		<div class="form-group">
+			<span class="text-gray text-uppercase">{{GROW_COMMENT_RULE_NAME}}</span>
+			<input type="text" id="rule_name" data-bind="value:name" class="form-control">
+		</div>
+		<div class="form-group">
+			<span class="text-gray text-uppercase">{{GROW_COMMENT_RULE_TRACKING_TITLE}}</span>
+			<input type="text" id="type_tracking" data-bind="value:scope" class="form-control">
+		</div>
+		<div class="form-group" id="specific_link" style="display:none;">
+			<div class="text-gray">{{GROW_COMMENT_RULE_FB_POST_LINK}}</div>
+			<input type="text" data-bind="value:post_link" class="form-control"
+				placeholder="Click on the timestamp of the post to get its link">
+		</div>
+		<div class="form-group">
+			<i class="text-gray">
+				{{GROW_COMMENT_RULE_DESC}}
+			</i>
+		</div>
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<span class="text-gray text-uppercase">{{GROW_COMMENT_RULE_RULES}}</span>
+			</div>
+		</div>
+		<div class="row rule mb-2">
+			<div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 align-self-start">{{GROW_COMMENT_RULE_REPLY_LIMIT}}:
+			</div>
+			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+				<label class="col align-self-end switch">
+					<input type="checkbox" class="form-control" id="reply-limit-switch">
+					<span class="slider round"></span>
+				</label>
+			</div>
+		</div>
+		<div class="row rule mb-2">
+			<div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 align-self-start">{{GROW_COMMENT_RULE_COMMENT_LEVEL}}:
+			</div>
+			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+				<label class="col align-self-end switch">
+					<input type="checkbox" class="form-control" id="without-child-comment-switch">
+					<span class="slider round"></span>
+				</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 form-group" id="rule-container">
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<span class="text-gray text-uppercase">{{GROW_COMMENT_RULE_ACTIONS}}</span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 action-btn-group">
+				<button class="btn btn-primary btn-md float-left"
+					id="auto_reply_action">{{GROW_COMMENT_RULE_AUTO_REPLY_COMMENT}}</button>
+				<button class="btn btn-default btn-md float-left"
+					id="send_private_message">{{GROW_COMMENT_RULE_SEND_PRIVATE_MSG}}</button>
+				<button class="btn btn-default btn-md float-left"
+					id="hide-comment-action">{{GROW_COMMENT_RULE_HIDE_COMMENT}}</button>
+			</div>
+		</div>
+		<div class="row" id="action-container">
+			<div class="col-md-12 col-sm-12 col-xs-12" id="rule_container">
+				<!-- RULE CONTAINER -->
+			</div>
+		</div>
+		<div class="row mb-5">
+			<div class="col-md-12 col-sm-12 col-xs-12" id="reply-content">
+				<button class="btn btn-default btn-md float-left" id="add_more_rules" title="Add More">
+					<span style="color: #333; cursor: pointer;" class="fa fa-plus"></span>
+					{{GROW_COMMENT_ADD_AI_RULE}}
+				</button>
+			</div>
+		</div>
+		<div class="row mb-3">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<button id="rule_comment_cancel" class="btn btn-default"><i class="fas fa-ban"></i> {{CLOSE}}</button>
+				<button id="rule_comment_save" class="btn btn-primary"><i class="fas fa-edit"></i> {{SAVE}}</button>
+			</div>
+		</div>
+	</div>
+</div>

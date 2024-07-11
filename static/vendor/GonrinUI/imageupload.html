@@ -1,0 +1,48 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<script src="js/jquery.js"></script>
+	<script src="vendor/bootstrap3/js/bootstrap.js"></script>
+	<link rel="stylesheet" href="vendor/bootstrap3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/gonrin.imageupload.css">
+		<!-- Optional theme -->
+	<link rel="stylesheet" href="vendor/bootstrap3/css/bootstrap-theme.min.css">
+	
+	<script src="js/underscore.js"></script>
+    <script src="js/gonrin.imageupload.js"></script>
+    <style>
+         
+        #test{
+            margin: 2em;
+            padding:2em;
+              box-shadow: 10px 10px 5px #888888; 
+            width: 200px;
+            height: 200px;
+            border: 1px dotted gray;
+            background-color: azure;
+        
+        }
+    </style>
+    <script >
+        $(document).ready(function(){
+            
+            $('#test').imageUpload({
+                Url: "https://api.imgur.com/3/image",
+                color:"Bule",
+                view_link:true,
+                width:300
+              /* upload: function(){
+                   alert('options');
+               }*/
+            });
+       
+        });
+    </script>
+    </head>
+<body>
+        
+  <div class ="container" id="test"></div>
+  
+</body>
+</html>

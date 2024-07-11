@@ -1,0 +1,85 @@
+<div class="row setup-modal-plugin">
+    <div class="col-lg-4 col-sm-4">
+        <div class="row">
+            <div class="col-lg-12 col-xs-12 modal-plugin-options">
+                <input type="text" name="name" data-bind="value:title" placeholder="{{WEBVIEW_TITLE}}"
+                    class="form-control input-name-modal" aria-required="true" aria-invalid="false">
+                <span></span>
+                <hr style="margin-top: 15px; margin-bottom: 15px;">
+                <div class="form-group">
+                    <div class="input-group col-lg-12 col-12" style="width: 100%;">
+                        <label class="text-gray text-uppercase">{{WEBVIEW_HEIGHT}}</label>
+                        <input type="text" class="form-control" data-bind="value:webview_height_ratio" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-builder-controller" id="uicontrols">
+                        <div class="elements text-center" name="text">
+                            <b class="text-center">Text</b>
+                            <div class="border-animate"></div>
+                        </div>
+                        <div class="elements text-center" name="input">
+                            <b class="text-center">Input</b>
+                            <div class="border-animate"></div>
+                        </div>
+                        <div class="elements text-center" name="textarea">
+                            <b class="text-center">Textarea</b>
+                            <div class="border-animate"></div>
+                        </div>
+                        <!-- <div class="elements text-center" name="checkbox">
+                            <b class="text-center">Checkbox</b>
+                            <div class="border-animate"></div>
+                        </div> -->
+                        <!-- <div class="elements text-center" name="select">
+                            <b class="text-center">Select</b>
+                            <div class="border-animate"></div>
+                        </div>
+                        <div class="elements text-center" name="radio">
+                            <b class="text-center">Radio</b>
+                            <div class="border-animate"></div>
+                        </div>
+                        <div class="elements text-center" name="media">
+                            <b class="text-center">Media</b>
+                            <div class="border-animate"></div>
+                        </div>
+                        <div class="elements text-center" name="countdown">
+                            <b class="text-center">Countdown</b>
+                            <div class="border-animate"></div>
+                        </div> -->
+                        <div class="elements text-center" name="newline">
+                            <b class="text-center">Newline</b>
+                            <div class="border-animate"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-sm-4">
+        <div id="webview_preview" class="col-lg-12 col-md-12 webview-build-wrap"
+            style="min-height: 400px; box-shadow: 0px 0px 1px 1px #eee;">
+        </div>
+    </div>
+    <div class="col-lg-4 col-sm-4">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-12" style="margin-top: 10px;">
+                <button class="btn btn-danger btn-sm ml-1 float-right" id="close">Close</button>
+                <button class="btn btn-success btn-sm ml-1 float-right" id="save">Lưu</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-12" style="padding-top: 30px;">
+                <div class="form-group">
+                    <div class="text-gray text-uppercase">Reply after form completed:</div>
+                    <select class="form-control">
+                        <option>Text</option>
+                        <option>Block</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea rows="3" class="form-control"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

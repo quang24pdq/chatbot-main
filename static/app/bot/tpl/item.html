@@ -1,0 +1,25 @@
+<div class="col-md-3 bot-list-item" data-id="{{_id}}">
+	<div class="deletebtn" style="display:flex;">
+		<button type="button" class="btn btn-link fa-inverse btn-delete" id="{{_id}}" title="Delete this bot">
+			<span class="glyphicon glyphicon-trash"></span>
+		</button>
+	</div>
+	<a href='javascript:void(0);' onclick='javascript:gonrinApp().getRouter().navigate("bot/model?id={{_id}}")'>
+		<div class="bot-tile">
+			<div class="image-container">
+				<div class="bot-tile-image-container" style="background-image: url({{page_profile_pic}})"></div>
+			</div>
+			<div class="text-container">
+				<div
+					style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 3; word-wrap: break-word; word-break: break-word;">
+					{{name}}
+				</div>
+			</div>
+			<div class="sub-text-container">
+				<div class="" style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2; word-wrap: break-word; word-break: break-word;">
+					{{CONNECTED_TO}} {{page_name}}
+				</div>
+			</div>
+		</div>
+	</a>
+</div>

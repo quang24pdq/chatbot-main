@@ -1,0 +1,115 @@
+<section id="header">
+	<div class="page-header-wrapper">
+		<div class="page-header navbar navbar-fixed-top">
+			<!-- BEGIN HEADER INNER -->
+			<div class="page-header-inner">
+				<!-- BEGIN LOGO -->
+				<div class="page-logo">
+					<img src="{% print(static_url) %}/images/logo.png" height="45px" alt="logo" class="logo-default" />
+					<div class="menu-toggler sidebar-toggler hide">
+						<!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
+					</div>
+				</div>
+				<div id="page-info-space" class="hide" style="width:450px; float:left; padding: 2px;">
+					<div style="width: 20px;float: left;line-height: 44px;">
+						<a href='javascript:void(0);' id="_back">
+							<span class="glyphicon glyphicon-arrow-left"></span>
+						</a>
+					</div>
+					<div style="width:46px;height:46px;margin-left:10px;float:left;overflow: hidden;border-radius:50%;border:1px solid lightgray;">
+						<img class="page-image" alt="" src="" style="height:100%;">
+					</div>
+					<div style="float: left;height: 50px; padding: 2px 8px;">
+						<div class="" id="page-name" style="font-size: 15px;margin-top: 4px;"></div>
+						<!-- <span class="glyphicon glyphicon-ok" style="color: rgb(53, 198, 124);font-weight:200;font-size:11px;">SAVED</span> -->
+						<div class="loader">
+							<div class="lds-ring">
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+								<span>loading...</span>
+							</div>
+							<div class="loader-content" style="white-space: nowrap;"></div>
+						</div>
+					</div>
+				</div>
+				<!-- END LOGO -->
+
+				<!-- BEGIN TOP NAVIGATION MENU -->
+				<div class="top-menu">
+					<ul class="nav navbar-nav pull-right">
+						<!-- BEGIN USER LOGIN DROPDOWN -->
+						<!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+						<li class="dropdown dropdown-user">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
+								data-close-others="true">
+								<!-- <img alt="" class="img-circle" src="{% print(static_url) %}/images/icons/user.png" /> -->
+								<span class="fa fa-user-circle"></span> <span class="username"> ... </span>
+								<i class="fa fa-angle-down"></i>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li>
+									<a href='https://account.upgo.vn/'>
+										<i class="fa fa-tasks"></i> Quản lý tài khoản
+									</a>
+								</li>
+								<li>
+									<a href='javascript:;'
+										onclick='javascript:gonrinApp().getRouter().navigate("logout")'>
+										<i class="fa fa-sign-out"></i> Đăng xuất
+									</a>
+								</li>
+							</ul>
+						</li>
+						<!-- END USER LOGIN DROPDOWN -->
+						<!-- BEGIN QUICK SIDEBAR TOGGLER -->
+						<!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+						<li class="dropdown dropdown-quick-sidebar-toggler">
+							<a href="javascript:;" class="dropdown-toggle">
+								<i class="icon-logout"></i>
+							</a>
+						</li>
+						<!-- END QUICK SIDEBAR TOGGLER -->
+					</ul>
+				</div>
+				<div class="top-menu">
+					<ul class="nav navbar-nav" style="margin-right: 5px;">
+						<li id="btn_vi" style="margin-right: 8px;">
+							<img src="https://static.upgo.vn/images/vi_VN.png" title="Tiếng Việt"
+								style="height: 26px; margin-top: 12px;cursor: pointer;" />
+						</li>
+						<li id="btn_en">
+							<img src="https://static.upgo.vn/images/en_EN.png" title="English"
+								style="height: 26px; margin-top: 12px;cursor: pointer;" />
+						</li>
+					</ul>
+				</div>
+				<div class="top-menu">
+					<ul class="nav navbar-nav">
+						<li>
+							<a class="sw" href="javascript:;" id="switch-tenant">{{BRAND_NAME}}</a>
+						</li>
+					</ul>
+				</div>
+				<!-- END TOP NAVIGATION MENU -->
+			</div>
+			<!-- END HEADER INNER -->
+		</div>
+	</div>
+</section>
+<!-- END HEADER -->
+<div class="clearfix"></div>
+<!-- BEGIN CONTAINER -->
+
+<div class="page-container page-container-fixed">
+	<div class="page-navbar-wrapper">
+		<div class="page-navbar"></div>
+	</div>
+	<div class="page-content-wrapper">
+		<div class="page-content" style="padding-top:15px;padding-left:0px;padding-right:0px;">
+			<!-- <div class="tools-area"></div> -->
+			<div class="content-area"></div>
+		</div>
+	</div>
+</div>

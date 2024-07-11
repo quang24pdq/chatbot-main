@@ -1,0 +1,42 @@
+{
+    "_id": {
+        "type": "string",
+        "primary": true
+    },
+    "bot_id": {
+        "type": "string"
+    },
+    "intent": {
+        "type": "string"
+    },
+    "entity": {
+        "type": "string"
+    },
+    "text": {
+        "type": "list"
+    },
+    "type": {
+        "type": "string",
+        "default":"text"
+    },
+    "block": {
+        "type": "dict"
+    },
+    "reply_text": {
+        "type": "string"
+    },
+    "deleted_at": {
+        "type": "datetime"
+    },
+    "deleted_by": {
+        "type": "string"
+    },
+    "active": {
+        "type": "boolean",
+        "default": true
+    },
+    "default": {
+        "type": "boolean",
+        "default": false
+    } 
+}

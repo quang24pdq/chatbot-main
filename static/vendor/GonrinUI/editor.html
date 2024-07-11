@@ -1,0 +1,42 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<script src="js/jquery.js"></script>
+	<script src="vendor/bootstrap3/js/bootstrap.js"></script>
+	<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+		<!-- Optional theme -->
+	<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap-theme.min.css">
+	
+	<link rel="stylesheet" href="css/gonrin.editor.css">
+	<script src="js/gonrin.editor.js"></script>
+
+	
+	<script type="text/javascript">
+            $(document).ready(function () {
+            	//console.log($('#editor').val());
+                $('#editor').gonrinEditor();
+                $("#setval").bind("click", function(){
+                	$('#editor').val("EFG");
+                	$('#editor').trigger("change");
+                });
+				//TODO: fix error
+            	
+            });
+       </script>
+</head>
+<body>
+	
+	 
+	 <div class="container">
+	    <div class="row-fluid" id="content" style="margin-top:20px;">
+	    	<br/>
+	    	<textarea id="editor">abc CDE</textarea>
+			<br/>
+			<button type="button" id="setval">Set value</button>
+	    </div>
+	    
+	</div>
+	
+</body>
+</html>

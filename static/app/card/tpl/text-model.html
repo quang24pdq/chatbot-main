@@ -1,0 +1,42 @@
+<div class="col-md-6 container-hover" style="margin: 1px;">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<div class="border-gradient-round-27">
+				<div class="border-gradient-round-container" id="position">
+				</div>
+			</div>
+			<div style="margin-left: 28px; font-weight: 550;">
+				{{TEXT_CARD}}
+			</div>
+		</div>
+		<div class="panel-body">
+			<div>
+				<textarea rows="8" card-text-bind="value:text" maxlength="630"></textarea>
+				<hr />
+				<div id="buttons-container"></div>
+				<button class="btn btn-primary" id="add_button" style="width:100%">
+					<span style="color: #fff; cursor: pointer;" class="fa fa-plus"></span> {{TEXT_CARD_ADD_BTN}}
+				</button>
+			</div>
+		</div>
+	</div>
+	<div class="deletebtn">
+		<a type="button" class="btn btn-link fa-inverse btn-delete" id="add_property" title="{{TEXT_CARD_ADD_PROPERTY}}"
+			style="padding: 6px 0px;">
+			<span class="fa fa-user-plus"></span>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-12">
+				<ul class="col-lg-12 col-xs-12 dropdown-menu" id="attribute_suggestion_list"
+					style="max-height: 350px; min-width: 200px; overflow: scroll;"></ul>
+			</div>
+		</a>
+		<a type="button" class="btn btn-link fa-inverse btn-delete" id="up_card_position" style="padding: 6px 0px;">
+			<span class="glyphicon glyphicon-arrow-up"></span>
+		</a>
+		<a type="button" class="btn btn-link fa-inverse btn-delete" id="down_card_position" style="padding: 6px 0px;">
+			<span class="glyphicon glyphicon-arrow-down"></span>
+		</a>
+		<a type="button" class="btn btn-link fa-inverse btn-delete" id="delete_card" title="Delete this card">
+			<span class="glyphicon glyphicon-trash remove"></span>
+		</a>
+	</div>
+</div>

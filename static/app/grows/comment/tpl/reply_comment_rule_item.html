@@ -1,0 +1,24 @@
+<div class="row rule form-group" style="margin: 7.5px 0px;">
+	<div class="col-md-12  padding-lr-0">
+		<span class="glyphicon glyphicon-trash remove"
+			id="btn-delele-rule"
+			style="float: right; cursor: pointer; margin-right: 5px;"></span>
+	</div>
+	<div class="col-md-3 col-sm-3 col-xs-12" id="ai_field">
+		<div class="col-md-12 col-sm-12 col-sx-12 padding-lr-0">{{SETUP_AI_DETECTION}}:</div>
+		<div class="col-md-12 col-sm-3 col-xs-12 padding-lr-0" style="margin-bottom: 5px;">
+			<input type="text" data-bind="value:intents" />
+		</div>
+	</div>
+	<div class="col-md-4 col-sm-4 col-xs-12" id="words_field">
+		<div class="col-md-12 col-sm-12 col-sx-12 padding-lr-0">{{SETUP_AI_RULE_DESC}}:</div>
+		<input type="text" class="form-control" name="typing" />
+		<div class="col-md-12 col-sm-12 col-sx-12 padding-lr-0" name="list-data" style="margin-top: 5px; margin-bottom: 5px;"></div>
+	</div>
+	<div class="col-md-5 col-sm-5 col-xs-12" id="reply_field">
+		<div class="col-md-12 col-xs-12 padding-lr-0">{{SETUP_AI_REPLY_TEXT}}:</div>
+		<div class="col-md-12 col-sm-12 col-xs-12 padding-lr-0 ai-setup-reply">
+			<textarea rows="3" class="form-control" id="reply_message"></textarea>
+		</div>
+	</div>
+</div>

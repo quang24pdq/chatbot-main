@@ -1,0 +1,29 @@
+{
+    "_id": {
+        "type": "string",
+        "primary": true
+    },
+    "name": {
+        "type": "string"
+    },
+    "type": {
+        "type": "string"
+    },
+    "broadcast_options": {
+        "type": "string"
+    },
+    "position": {
+        "type": "number"
+    },
+    "default": {
+        "type": "boolean",
+        "default": false
+    },
+    "bot_id": {
+        "type": "string"
+    },
+    "active": {
+        "type": "boolean",
+        "default": true
+    }
+}

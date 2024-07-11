@@ -1,0 +1,20 @@
+[Unit]
+Description=UPGO Facebook ChatBOT Daemon
+After=network.target
+
+[Service]
+PIDFile=/var/run/upgo-bot.pid
+User=ubuntu
+Group=ubuntu
+RuntimeDirectory=UpgoBOT
+WorkingDirectory=/opt/deploy/UpgoBOT/repo/
+EnvironmentFile=/opt/deploy/UpgoBOT/.env
+ExecStart=/opt/deploy/UpgoBOT/bin/python manage.py run
+ExecReload=/bin/kill -s HUP $MAINPID
+ExecStop=/bin/kill -s TERM $MAINPID
+PrivateTmp=true
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+#place in to /etc/systemd/system

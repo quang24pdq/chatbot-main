@@ -1,0 +1,293 @@
+{
+    "structure": {
+        "groups": [
+            {
+                "type": "group",
+                "default": true,
+                "name": "Welcome",
+                "position": 0,
+                "bot_id": null,
+                "active": true,
+                "tenant_id": null,
+                "blocks": [
+                    {
+                        "name": "Welcome",
+                        "payload": "welcome",
+                        "default": true,
+                        "position": 0,
+                        "type": "structure",
+                        "ref_link": {
+                            "active": true,
+                            "param": "welcome"
+                        },
+                        "group_id": null,
+                        "bot_id": null,
+                        "tenant_id": null,
+                        "created_at": null,
+                        "updated_at": null,
+                        "cards": [
+                            {
+                                "type": "typing",
+                                "time": 1.5,
+                                "position": 1,
+                                "block_id": null,
+                                "bot_id": null,
+                                "tenant_id": null
+                            },
+                            {
+                                "text": "Chào {{name}}! Cảm ơn bạn đã liên hệ với {{page_name}}.\nChúng tôi có thể giúp gì cho bạn?.",
+                                "buttons": [],
+                                "block_id": null,
+                                "type": "text",
+                                "position": 2,
+                                "bot_id": null,
+                                "tenant_id": null
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "group",
+                "default": true,
+                "name": "Thành viên",
+                "position": 9999999999999,
+                "bot_id": null,
+                "active": true,
+                "tenant_id": null,
+                "blocks": [
+                    {
+                        "name": "CRM - Thông tin TV & Chương trình",
+                        "payload": "promotion",
+                        "default": true,
+                        "position": 3,
+                        "type": "structure",
+                        "ref_link": {
+                            "active": false,
+                            "param": "promotion"
+                        },
+                        "group_id": null,
+                        "bot_id": null,
+                        "tenant_id": null,
+                        "created_at": null,
+                        "updated_at": null,
+                        "cards": [
+                            {
+                                "type": "typing",
+                                "time": 1.5,
+                                "position": 1,
+                                "block_id": null,
+                                "bot_id": null,
+                                "tenant_id": null
+                            },
+                            {
+                                "type": "text",
+                                "text": "️Chúc mừng bạn đã trở thành Thành viên của {{page_name}}.\nThẻ Thành Viên của bạn!",
+                                "buttons": [{
+                                    "_id": "8e495e2a-df33-11ea-87d0-0242ac130003",
+                                    "type": "web_url",
+                                    "title": "🎖️Thẻ Thành Viên",
+                                    "url": "https://crm.upgo.vn/api/v1/contact/profilecard",
+                                    "webview_height_ratio": "full",
+                                    "blocks": [],
+                                    "phone_number": null
+                                }],
+                                "position": 2,
+                                "block_id": null,
+                                "bot_id": null,
+                                "tenant_id": null
+                            },
+                            {
+                                "type": "jsonapi",
+                                "type_method": "POST",
+                                "url": "https://crm.upgo.vn/api/integration/chatbot/contact",
+                                "attributes": ["page_id", "page_name", "name", "first_name", "last_name", "phone", "gender", "birthday", "profile_pic", "locale"],
+                                "position": 3,
+                                "block_id": null,
+                                "bot_id": null,
+                                "tenant_id": null
+                            },
+                            {
+                                "type": "jsonapi",
+                                "type_method": "POST",
+                                "url": "https://crm.upgo.vn/api/integration/chatbot/get-promotion-by-contact",
+                                "attributes": ["page_id", "page_name", "name", "first_name", "last_name", "phone", "gender", "birthday", "profile_pic", "locale"],
+                                "position": 4,
+                                "block_id": null,
+                                "bot_id": null,
+                                "tenant_id": null
+                            },
+                            {
+                                "type": "text",
+                                "text": "Quý khách sẽ được tích điểm trên mỗi hoá đơn thanh toán, dùng điểm có thể đổi nhiều phần quà hấp dẫn từ nhà hàng.\n❗Lưu ý: Chỉ áp dụng 1 chương trình ưu đãi trên 1 hoá đơn thanh toán.",
+                                "buttons": [],
+                                "position": 5,
+                                "block_id": null,
+                                "bot_id": null,
+                                "tenant_id": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "CRM - Nhập thông tin",
+                        "payload": "loyalty_form",
+                        "default": true,
+                        "position": 2,
+                        "type": "structure",
+                        "ref_link": {},
+                        "group_id": null,
+                        "bot_id": null,
+                        "tenant_id": null,
+                        "created_at": null,
+                        "updated_at": null,
+                        "cards": [
+                            {
+                                "type": "typing",
+                                "time": 1.5,
+                                "position": 1,
+                                "block_id": null,
+                                "bot_id": null,
+                                "tenant_id": null
+                            },
+                            {
+                                "type": "contactinput",
+                                "position": 2,
+                                "fields": [
+                                    {
+                                        "attribute": "phone",
+                                        "text": "Nhập Số điện thoại:",
+                                        "validation": "phone"
+                                    },
+                                    {
+                                        "attribute": "birthday",
+                                        "text": "Nhập ngày sinh để nhận Ưu đãi đặc biệt vào ngày sinh nhật (DD/MM/YYYY):",
+                                        "validation": "none"
+                                    }
+                                ],
+                                "block_id": null,
+                                "bot_id": null,
+                                "tenant_id": null
+                            },
+                            {
+                                "type": "gotoblock",
+                                "blocks": [{
+                                    "payload": "promotion",
+                                    "name": "Chương trình Ưu đãi"
+                                }],
+                                "rule_condition": "and",
+                                "conditions": [],
+                                "position": 3,
+                                "random": false,
+                                "block_id": null,
+                                "bot_id": null,
+                                "tenant_id": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "CRM - Đăng ký thành viên",
+                        "payload": "member",
+                        "default": true,
+                        "position": 1,
+                        "type": "structure",
+                        "ref_link": {
+                            "active": true,
+                            "param": "member"
+                        },
+                        "group_id": null,
+                        "bot_id": null,
+                        "tenant_id": null,
+                        "created_at": null,
+                        "updated_at": null,
+                        "cards": [
+                            {
+                                "type": "typing",
+                                "time": 1.5,
+                                "position": 1,
+                                "block_id": null,
+                                "bot_id": null,
+                                "tenant_id": null
+                            },
+                            {
+                                "type": "gotoblock",
+                                "blocks": [
+                                    {
+                                        "payload": "loyalty_form",
+                                        "name": "Nhập thông tin"
+                                    }
+                                ],
+                                "rule_condition": "and",
+                                "conditions": [
+                                    {
+                                        "type_filter": "attribute",
+                                        "attribute": "phone",
+                                        "comparison": "==",
+                                        "value": "None",
+                                        "_id": "0bd48875-4089-4788-8289-1c529a0e95c1"
+                                    }
+                                ],
+                                "position": 3,
+                                "random": false,
+                                "block_id": null,
+                                "bot_id": null,
+                                "tenant_id": null
+                            },
+                            {
+                                "type": "gotoblock",
+                                "blocks": [{
+                                    "payload": "promotion",
+                                    "name": "Lấy khuyến mãi"
+                                }],
+                                "rule_condition": "and",
+                                "conditions": [],
+                                "position": 3,
+                                "random": false,
+                                "block_id": null,
+                                "bot_id": null,
+                                "tenant_id": null
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "setup_ai": {
+        "rules": [
+            {
+                "type": "block",
+                "text": [
+                    "Xin chào",
+                    "Hello",
+                    "Hi"
+                ],
+                "block": {
+                    "name": "Welcome",
+                    "payload": "welcome"
+                },
+                "reply_text": null,
+                "intent": "greetings",
+                "position": 0,
+                "active": true,
+                "tenant_id": null,
+                "bot_id": null
+            }
+        ]
+    },
+    "persistant_menu": {
+        "buttons": [
+            {
+                "_id": "8e495bdc-df33-11ea-87d0-0242ac130003",
+                "title": "⚡ by UPGO.vn",
+                "type": "web_url",
+                "phone_number": null,
+                "blocks": [],
+                "url": "https://www.upgo.vn",
+                "webview_height_ratio": "full"
+            }
+        ],
+        "active": true,
+        "bot_id": null,
+        "tenant_id": null
+    }
+}

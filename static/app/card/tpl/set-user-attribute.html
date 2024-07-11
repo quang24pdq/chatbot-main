@@ -1,0 +1,44 @@
+<div class="col-md-12 container-hover">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="border-gradient-round-27">
+                <div class="border-gradient-round-container" id="position">
+                </div>
+            </div>
+            <div style="margin-left: 28px; font-weight: 550;">
+                {{SETUP_USER_ATTR_CARD}}
+            </div>
+        </div>
+        <div class="panel-body">
+            <div style="margin: 5px; opacity: 0.4;">
+                <span>{{SETUP_USER_ATTR_CARD_DESC}}</span>
+
+            </div>
+            <div class="row" style="font-size: 13px; opacity: 0.6;">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    {{SETUP_USER_ATTR_NAME}}
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                    {{SETUP_USER_ATTR_VALUE}}
+                </div>
+            </div>
+            <div id="field-container"></div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 form-group padding-lr-0" style="margin-top: 15px;">
+                <button class="btn btn-default btn-md float-left" id="add_field" title="Add field">
+                    <span style="color: #333; cursor: pointer;" class="fa fa-plus"></span> {{SETUP_USER_ATTR_ADD}}
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="deletebtn">
+        <a type="button" class="btn btn-link fa-inverse btn-delete" id="up_card_position" style="padding: 6px 0px;">
+            <span class="glyphicon glyphicon-arrow-up"></span>
+        </a>
+        <a type="button" class="btn btn-link fa-inverse btn-delete" id="down_card_position" style="padding: 6px 0px;">
+            <span class="glyphicon glyphicon-arrow-down"></span>
+        </a>
+        <a type="button" class="btn btn-link fa-inverse btn-delete" id="delete_card" title="Delete this card">
+            <span class="glyphicon glyphicon-trash remove"></span>
+        </a>
+    </div>
+</div>

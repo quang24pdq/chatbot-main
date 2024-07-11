@@ -1,0 +1,83 @@
+.gr-select > .gr-input,  .gr-combobox > .gr-input{
+    display: block;
+}
+
+.gr-combobox .gr-input__inner {
+    cursor: pointer;
+    padding-right: 35px;
+    background: #fff;
+}
+
+.gr-select, .gr-combobox{
+    display: inline-block;
+    position: relative;
+}
+
+.gr-input {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.gr-input__suffix {
+    position: absolute;
+    height: 100%;
+    right: 5px;
+    top: 0;
+    text-align: center;
+    /* color: #c0c4cc; */
+    transition: all .3s;
+    pointer-events: none;
+}
+
+.gr-input__suffix-inner {
+    pointer-events: all;
+}
+
+.gr-select .gr-input .gr-select__caret {
+    /* color: #c0c4cc; */
+    font-size: 14px;
+    transition: transform .3s;
+    transform: rotate(180deg);
+    cursor: pointer;
+}
+
+.gr-input__icon {
+    width: 25px;
+    line-height: 40px;
+}
+
+.gr-input__icon, .gr-input__prefix {
+    height: 100%;
+    text-align: center;
+    transition: all .3s;
+}
+
+[class*=" gr-icon-"], [class^="gr-icon-"] {
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: baseline;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* .gr-icon-arrow-up::before {
+    content: "\e6e1";
+} */
+
+.gr-input__icon::after {
+    content: "";
+    display: inline-block;
+    height: 35%;
+    margin-top: 65%;
+    content: "";
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-bottom: 0;
+    border-left: .3em solid transparent;
+}

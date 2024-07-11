@@ -1,0 +1,51 @@
+{
+    "id": {
+        "type": "string",
+        "primary": true
+    },
+    "user_name": {
+        "type": "string",
+        "required": true,
+        "length": 255
+    },
+    "user_password": {
+        "type": "string",
+        "required": true,
+        "length": 200
+    },
+    "email": {
+        "type": "string",
+        "length": 100
+    },
+    "phone": {
+        "type": "string",
+        "length": 50
+    },
+    "facebook_id": {
+        "type": "string"
+    },
+    "bot_ids": {
+        "type": "list"
+    },
+    "page_ids": {
+        "type": "dict"
+    },
+    "deleted": {
+        "type": "boolean",
+        "default": false
+    },
+    "deleted_at": {
+        "type": "datetime"
+    },
+    "deleted_by": {
+        "type": "string"
+    },
+    "active": {
+        "type": "boolean",
+        "default": true
+    },
+    "is_admin": {
+        "type": "boolean",
+        "default": false
+    }
+}

@@ -1,0 +1,49 @@
+{
+    "_id": {
+        "type": "string",
+        "primary": true
+    },
+    "name": {
+        "type": "string"
+    },
+    "type": {
+    	"type": "string"
+    },
+    "position": {
+    	"type": "number"
+    },
+    "recipients": {
+        "type": "number"
+    },
+    "failed": {
+        "type": "number"
+    },
+    "read": {
+        "type": "number"
+    },
+    "replied": {
+        "type": "number"
+    },
+    "sent_time": {
+        "type": "number"
+    },
+    "group_id": {
+        "type": "string"
+    },
+    "bot_id": {
+        "type": "string"
+    },
+    "conditions": {
+        "type": "dict"
+    },
+    "use_time_condition": {
+        "type": "boolean",
+        "default": false
+    },
+    "target_from": {
+        "type": "number"
+    },
+    "target_to": {
+        "type": "number"
+    }
+}

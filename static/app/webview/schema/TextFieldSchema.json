@@ -1,0 +1,28 @@
+{
+    "_id": {
+        "type": "string"
+    },
+    "name": {
+        "type": "string",
+        "default": "text"
+    },
+    "label": {
+        "type": "string",
+        "default": "Label Name"
+    },
+    "align": {
+        "type": "string",
+        "default": "left"
+    },
+    "color": {
+        "type": "string",
+        "default": "#bdbdbd"
+    },
+    "style_class": {
+        "type": "string",
+        "default": "text-uppercase"
+    },
+    "position": {
+        "type": "number"
+    }
+}

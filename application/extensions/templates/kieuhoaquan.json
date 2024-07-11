@@ -1,0 +1,819 @@
+{
+    "name": "Nhà hàng Kiều Hoa Quán - Mẫu",
+    "business_line": "restaurant",
+    "structure": {
+        "groups": [
+            {
+                "type": "group",
+                "default": true,
+                "name": "Welcome",
+                "position": 0,
+                "bot_id": null,
+                "active": true,
+                "tenant_id": null,
+                "blocks": [
+                    {
+                        "name": "Welcome",
+                        "payload": "welcome",
+                        "default": true,
+                        "position": 0,
+                        "type": "structure",
+                        "ref_link": {
+                            "active": true,
+                            "param": "welcome"
+                        },
+                        "group_id": null,
+                        "bot_id": null,
+                        "tenant_id": null,
+                        "created_at": null,
+                        "updated_at": null,
+                        "cards": [
+                            {
+                                "type": "typing",
+                                "time": 1.5,
+                                "position": 1,
+                                "block_id": null,
+                                "bot_id": null,
+                                "tenant_id": null
+                            },
+                            {
+                                "type": "gotoblock",
+                                "rule_condition": "and",
+                                "conditions": [
+                                    {
+                                        "attribute": "gender",
+                                        "comparison": "==",
+                                        "type_filter": "attribute",
+                                        "value": "None",
+                                        "_id": "75be4952-d0eb-11ea-87d0-0242ac130003"
+                                    }
+                                ],
+                                "blocks": [
+                                    {
+                                        "name": "Hỏi Giới Tính",
+                                        "payload": "confirm_gender"
+                                    }
+                                ],
+                                "random": null,
+                                "position": 2,
+                                "block_id": null,
+                                "bot_id": null,
+                                "tenant_id": null
+                            },
+                            {
+                                "text": "Kính chào {{gender}} {{name}}!",
+                                "buttons": [],
+                                "block_id": null,
+                                "type": "text",
+                                "position": 3,
+                                "bot_id": null,
+                                "tenant_id": null
+                            },
+                            {
+                                "text": "Nhà hàng {{page_name}} có thể hỗ trợ gì cho {{gender}} ạ?\n{{gender}} vui lòng chọn các lựa chọn bên dưới nhé:",
+                                "buttons": [
+                                    {
+                                        "_id": "b18ddd2c-d559-11ea-87d0-0242ac130003",
+                                        "type": "web_url",
+                                        "title": "Không gian nhà hàng",
+                                        "phone_number": null,
+                                        "blocks": [],
+                                        "url": "http://kieuhoaquan.vn/khong-gian-nha-hang/",
+                                        "webview_height_ratio": "full"
+                                    },
+                                    {
+                                        "_id": "b18de10a-d559-11ea-87d0-0242ac130003",
+                                        "type": "postback",
+                                        "title": "Xem Menu",
+                                        "blocks": [
+                                            {
+                                                "name": "Menu",
+                                                "payload": "menu"
+                                            }
+                                        ],
+                                        "phone_number": null,
+                                        "url": null,
+                                        "webview_height_ratio": null
+                                    },
+                                    {
+                                        "_id": "b18de6be-d559-11ea-87d0-0242ac130003",
+                                        "type": "postback",
+                                        "title": "Nhận Ưu Đãi",
+                                        "blocks": [
+                                            {
+                                                "name": "Đăng ký thành viên",
+                                                "payload": "member"
+                                            }
+                                        ],
+                                        "phone_number": null,
+                                        "url": null,
+                                        "webview_height_ratio": null
+                                    }
+                                ],
+                                "block_id": null,
+                                "type": "text",
+                                "position": 4,
+                                "bot_id": null,
+                                "tenant_id": null
+                            },
+                            {
+                                "type": "typing",
+                                "time": 1.5,
+                                "position": 5,
+                                "block_id": null,
+                                "bot_id": null,
+                                "tenant_id": null
+                            },
+                            {
+                                "type": "text",
+                                "text": "Nếu không liên lạc được, {{gender}} vui lòng Gọi Số Cố Định hoặc Để Lại Yêu Cầu.\nBên em sẽ liên hệ lại {{gender}} sớm nhất ạ. Em xin cảm ơn {{gender}} ạ",
+                                "buttons": [
+                                    {
+                                        "_id": "b18de7f4-d559-11ea-87d0-0242ac130003",
+                                        "type": "phone_number",
+                                        "title": "☎ Gọi Số Cố Định",
+                                        "phone_number": "0948290291",
+                                        "blocks": [],
+                                        "url": null,
+                                        "webview_height_ratio": null
+                                    },
+                                    {
+                                        "_id": "b18de8d0-d559-11ea-87d0-0242ac130003",
+                                        "type": "web_url",
+                                        "title": "📝 Để Lại Yêu Cầu",
+                                        "phone_number": null,
+                                        "blocks": [],
+                                        "url": "http://m.meeup.io/anlaphaingon/datbankieuhoaquan",
+                                        "webview_height_ratio": "full"
+                                    },
+                                    {
+                                        "_id": "b18de98e-d559-11ea-87d0-0242ac130003",
+                                        "type": "web_url",
+                                        "title": "Mua mang về",
+                                        "phone_number": null,
+                                        "blocks": [],
+                                        "url": "http://m.meeup.io/anlaphaingon/1",
+                                        "webview_height_ratio": "full"
+                                    }
+                                ],
+                                "position": 6,
+                                "block_id": null,
+                                "bot_id": null,
+                                "tenant_id": null
+                            }
+                        ]
+                    },
+                    {
+                        "type": "structure",
+                        "payload": "wifi",
+                        "name": "Vào WiFi",
+                        "ref_link": {
+                            "param": "wifi",
+                            "active": true
+                        },
+                        "default": true,
+                        "position": 1,
+                        "active": true,
+                        "group_id": null,
+                        "bot_id": null,
+                        "tenant_id": null
+                    }
+                ]
+            },
+            {
+                "type": "group",
+                "default": true,
+                "name": "Thành viên",
+                "position": 9999999999999,
+                "bot_id": null,
+                "active": true,
+                "tenant_id": null,
+                "blocks": [
+                    {
+                        "name": "Chương trình Ưu đãi",
+                        "payload": "promotion",
+                        "default": true,
+                        "position": 3,
+                        "type": "structure",
+                        "ref_link": {
+                            "active": false,
+                            "param": "promotion"
+                        },
+                        "group_id": null,
+                        "bot_id": null,
+                        "tenant_id": null,
+                        "created_at": null,
+                        "updated_at": null,
+                        "cards": [
+                            {
+                                "type": "typing",
+                                "time": 1.5,
+                                "position": 1,
+                                "block_id": null,
+                                "bot_id": null,
+                                "tenant_id": null
+                            },
+                            {
+                                "type": "jsonapi",
+                                "type_method": "POST",
+                                "url": "https://crm.upgo.vn/api/integration/chatbot/contact",
+                                "attributes": [
+                                    "page_id",
+                                    "page_name",
+                                    "name",
+                                    "first_name",
+                                    "last_name",
+                                    "phone",
+                                    "gender",
+                                    "birthday",
+                                    "profile_pic",
+                                    "locale"
+                                ],
+                                "position": 2,
+                                "block_id": null,
+                                "bot_id": null,
+                                "tenant_id": null
+                            },
+                            {
+                                "type": "jsonapi",
+                                "type_method": "POST",
+                                "url": "https://crm.upgo.vn/api/integration/chatbot/promotions",
+                                "attributes": [
+                                    "page_id",
+                                    "page_name",
+                                    "name",
+                                    "first_name",
+                                    "last_name",
+                                    "phone",
+                                    "gender",
+                                    "birthday",
+                                    "profile_pic",
+                                    "locale"
+                                ],
+                                "position": 3,
+                                "block_id": null,
+                                "bot_id": null,
+                                "tenant_id": null
+                            },
+                            {
+                                "type": "text",
+                                "text": "Quý khách sẽ được tích điểm trên mỗi hoá đơn thanh toán, dùng điểm có thể đổi nhiều phần quà hấp dẫn từ nhà hàng.\n❗Lưu ý: Chỉ áp dụng 1 chương trình ưu đãi trên 1 hoá đơn thanh toán.",
+                                "buttons": [],
+                                "position": 4,
+                                "block_id": null,
+                                "bot_id": null,
+                                "tenant_id": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Nhập thông tin đăng ký",
+                        "payload": "loyalty_form",
+                        "default": true,
+                        "position": 2,
+                        "type": "structure",
+                        "ref_link": {},
+                        "group_id": null,
+                        "bot_id": null,
+                        "tenant_id": null,
+                        "created_at": null,
+                        "updated_at": null,
+                        "cards": [
+                            {
+                                "type": "typing",
+                                "time": 1.5,
+                                "position": 1,
+                                "block_id": null,
+                                "bot_id": null,
+                                "tenant_id": null
+                            },
+                            {
+                                "type": "contactinput",
+                                "position": 2,
+                                "fields": [
+                                    {
+                                        "attribute": "phone",
+                                        "text": "Nhập Số điện thoại:",
+                                        "validation": "phone"
+                                    },
+                                    {
+                                        "attribute": "birthday",
+                                        "text": "Nhập ngày sinh để nhận Ưu đãi đặc biệt vào ngày sinh nhật (DD/MM/YYYY):",
+                                        "validation": "none"
+                                    }
+                                ],
+                                "block_id": null,
+                                "bot_id": null,
+                                "tenant_id": null
+                            },
+                            {
+                                "type": "gotoblock",
+                                "blocks": [
+                                    {
+                                        "payload": "promotion",
+                                        "name": "Chương trình Ưu đãi"
+                                    }
+                                ],
+                                "rule_condition": "and",
+                                "conditions": [],
+                                "random": null,
+                                "position": 3,
+                                "block_id": null,
+                                "bot_id": null,
+                                "tenant_id": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Đăng ký thành viên",
+                        "payload": "member",
+                        "default": true,
+                        "position": 1,
+                        "type": "structure",
+                        "ref_link": {
+                            "active": true,
+                            "param": "member"
+                        },
+                        "group_id": null,
+                        "bot_id": null,
+                        "tenant_id": null,
+                        "created_at": null,
+                        "updated_at": null,
+                        "cards": [
+                            {
+                                "type": "typing",
+                                "time": 1.5,
+                                "position": 1,
+                                "block_id": null,
+                                "bot_id": null,
+                                "tenant_id": null
+                            },
+                            {
+                                "type": "gotoblock",
+                                "blocks": [
+                                    {
+                                        "payload": "loyalty_form",
+                                        "name": "Nhập thông tin đăng ký"
+                                    }
+                                ],
+                                "conditions": [
+                                    {
+                                        "type_filter": "attribute",
+                                        "attribute": "phone",
+                                        "comparison": "==",
+                                        "value": "None",
+                                        "_id": "0bd48875-4089-4788-8289-1c529a0e95c1"
+                                    }
+                                ],
+                                "rule_condition": "and",
+                                "random": null,
+                                "position": 3,
+                                "block_id": null,
+                                "bot_id": null,
+                                "tenant_id": null
+                            },
+                            {
+                                "type": "gotoblock",
+                                "blocks": [
+                                    {
+                                        "payload": "promotion",
+                                        "name": "Chương trình Ưu đãi"
+                                    }
+                                ],
+                                "rule_condition": "and",
+                                "conditions": [],
+                                "position": 3,
+                                "random": false,
+                                "block_id": null,
+                                "bot_id": null,
+                                "tenant_id": null
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "group",
+                "default": false,
+                "name": "Nhà hàng",
+                "position": 0,
+                "bot_id": null,
+                "active": true,
+                "tenant_id": null,
+                "blocks": [
+                    {
+                        "type": "structure",
+                        "payload": "confirm_gender",
+                        "name": "Hỏi Giới Tính",
+                        "ref_link": {
+                            "active": false,
+                            "param": null
+                        },
+                        "position": 1,
+                        "active": true,
+                        "group_id": null,
+                        "bot_id": null,
+                        "tenant_id": null,
+                        "cards": [
+                            {
+                                "type": "typing",
+                                "time": 1.5,
+                                "position": 1,
+                                "block_id": null,
+                                "bot_id": null,
+                                "tenant_id": null
+                            },
+                            {
+                                "type": "quickreply",
+                                "text": "Xin chào {{name}}, em có thể xưng hô với Anh/Chị là:",
+                                "buttons": [
+                                    {
+                                        "title": "Anh",
+                                        "_id": "b05de5b2-707b-41ab-8c0d-4521a0f2dbf9"
+                                    },
+                                    {
+                                        "title": "Chị",
+                                        "_id": "eb3b72dc-d0ea-11ea-87d0-0242ac130003"
+                                    }
+                                ],
+                                "attribute": "gender",
+                                "position": 2,
+                                "block_id": null,
+                                "bot_id": null,
+                                "tenant_id": null
+                            },
+                            {
+                                "type": "gotoblock",
+                                "blocks": [
+                                    {
+                                        "name": "Welcome",
+                                        "payload": "welcome"
+                                    }
+                                ],
+                                "rule_condition": "and",
+                                "conditions": [],
+                                "random": null,
+                                "position": 3,
+                                "block_id": null,
+                                "bot_id": null,
+                                "tenant_id": null
+                            }
+                        ]
+                    },
+                    {
+                        "type": "structure",
+                        "payload": "menu",
+                        "name": "Menu",
+                        "ref_link": {
+                            "active": true,
+                            "param": "menu"
+                        },
+                        "position": 1,
+                        "active": true,
+                        "group_id": null,
+                        "bot_id": null,
+                        "tenant_id": null,
+                        "cards": [
+                            {
+                                "type": "typing",
+                                "time": 1.5,
+                                "position": 1,
+                                "block_id": null,
+                                "bot_id": null,
+                                "tenant_id": null
+                            },
+                            {
+                                "type": "text",
+                                "text": "Anh/Chị {{name}} vui lòng bấm vào nút bên dưới để xem Menu ạ.",
+                                "buttons": [
+                                    {
+                                        "type": "web_url",
+                                        "title": "Xem menu",
+                                        "blocks": [],
+                                        "phone_number": null,
+                                        "url": "http://kieuhoaquan.vn/menu-kieu-hoa-quan/",
+                                        "webview_height_ratio": "tall"
+                                    }
+                                ],
+                                "position": 2,
+                                "block_id": null,
+                                "bot_id": null,
+                                "tenant_id": null
+                            }
+                        ]
+                    },
+                    {
+                        "type": "structure",
+                        "payload": "booking",
+                        "name": "Hỏi đặt bàn",
+                        "active": true,
+                        "default": false,
+                        "position": 2,
+                        "ref_link": {
+                            "active": false,
+                            "param": null
+                        },
+                        "group_id": null,
+                        "bot_id": null,
+                        "tenant_id": null,
+                        "cards": [
+                            {
+                                "type": "typing",
+                                "time": 1.5,
+                                "position": 1,
+                                "block_id": null,
+                                "bot_id": null,
+                                "tenant_id": null
+                            },
+                            {
+                                "type": "text",
+                                "text": "Để đặt bàn anh/chị {{name}} vui lòng nhấn ĐẶT BÀN NGAY! bên dưới ạ!",
+                                "buttons": [
+                                    {
+                                        "type": "web_url",
+                                        "title": "ĐẶT BÀN NGAY!",
+                                        "blocks": [],
+                                        "phone_number": null,
+                                        "url": "https://site.upgo.vn/kieuhoaquan/datbankieuhoaquan",
+                                        "webview_height_ratio": "tall"
+                                    }
+                                ],
+                                "position": 2,
+                                "block_id": null,
+                                "bot_id": null,
+                                "tenant_id": null
+                            }
+                        ]
+                    },
+                    {
+                        "type": "structure",
+                        "payload": "address",
+                        "name": "Địa chỉ nhà hàng",
+                        "active": true,
+                        "default": false,
+                        "position": 3,
+                        "ref_link": {
+                            "active": true,
+                            "param": "address"
+                        },
+                        "group_id": null,
+                        "bot_id": null,
+                        "tenant_id": null,
+                        "cards": [
+                            {
+                                "type": "typing",
+                                "time": 1.5,
+                                "position": 1,
+                                "block_id": null,
+                                "bot_id": null,
+                                "tenant_id": null
+                            },
+                            {
+                                "type": "text",
+                                "text": "Địa chỉ nhà hàng chính xác tại 291 phố Tô Hiệu - Cầu giấy.\nCần hỗ trợ gì thêm anh/chị vui lòng gọi 0948.290.291",
+                                "buttons": [
+                                    {
+                                        "type": "postback",
+                                        "title": "XEM MENU",
+                                        "blocks": [
+                                            {
+                                                "name": "Menu",
+                                                "payload": "menu"
+                                            }
+                                        ],
+                                        "phone_number": null,
+                                        "url": null,
+                                        "webview_height_ratio": "tall"
+                                    },
+                                    {
+                                        "type": "postback",
+                                        "title": "ĐẶT BÀN TRƯỚC",
+                                        "blocks": [
+                                            {
+                                                "name": "Hỏi đặt bàn",
+                                                "payload": "booking"
+                                            }
+                                        ],
+                                        "phone_number": null,
+                                        "url": null,
+                                        "webview_height_ratio": "tall"
+                                    }
+                                ],
+                                "position": 2,
+                                "block_id": null,
+                                "bot_id": null,
+                                "tenant_id": null
+                            }
+                        ]
+                    },
+                    {
+                        "type": "structure",
+                        "payload": "holiday",
+                        "name": "Lịch Nghỉ Lễ",
+                        "active": true,
+                        "default": false,
+                        "position": 4,
+                        "ref_link": {
+                            "active": false,
+                            "param": null
+                        },
+                        "group_id": null,
+                        "bot_id": null,
+                        "tenant_id": null,
+                        "cards": [
+                            {
+                                "type": "typing",
+                                "time": 1.5,
+                                "position": 1,
+                                "block_id": null,
+                                "bot_id": null,
+                                "tenant_id": null
+                            },
+                            {
+                                "type": "text",
+                                "text": "Nhà hàng {{page_name}} bắt đầu mở cửa từ ngày 08/01/2020 (âm lịch) - tức 01/02/2020 (dương lịch).\n\nChúc Quý Khách Năm Mới An Khang - Thịnh Vượng.",
+                                "buttons": [
+                                    {
+                                        "type": "postback",
+                                        "title": "Tôi muốn đặt bàn trước!",
+                                        "blocks": [
+                                            {
+                                                "name": "Hỏi đặt bàn",
+                                                "payload": "booking"
+                                            }
+                                        ],
+                                        "phone_number": null,
+                                        "url": null,
+                                        "webview_height_ratio": "tall"
+                                    }
+                                ],
+                                "position": 2,
+                                "block_id": null,
+                                "bot_id": null,
+                                "tenant_id": null
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "setup_ai": {
+        "rules": [
+            {
+                "type": "block",
+                "text": [
+                    "Xin chào",
+                    "Hello",
+                    "Hi",
+                    "Alo"
+                ],
+                "block": {
+                    "name": "Welcome",
+                    "payload": "welcome"
+                },
+                "reply_text": null,
+                "intent": "greetings",
+                "position": 1,
+                "active": true,
+                "tenant_id": null,
+                "bot_id": null
+            },
+            {
+                "type": "block",
+                "text": [
+                    "Cho mình xem trước menu nhà hàng với"
+                ],
+                "block": {
+                    "name": "Menu",
+                    "payload": "menu"
+                },
+                "reply_text": null,
+                "intent": "ask_menu",
+                "position": 2,
+                "active": true,
+                "tenant_id": null,
+                "bot_id": null
+            },
+            {
+                "type": "block",
+                "text": [
+                    "Nhà hàng đang có chương trình ưu đãi gì?"
+                ],
+                "block": {
+                    "name": "Đăng ký thành viên",
+                    "payload": "member"
+                },
+                "reply_text": null,
+                "intent": "ask_promotion",
+                "position": 3,
+                "active": true,
+                "tenant_id": null,
+                "bot_id": null
+            },
+            {
+                "type": "block",
+                "text": [
+                    "Mình muốn đặt bàn trước"
+                ],
+                "block": {
+                    "name": "Hỏi đặt bàn",
+                    "payload": "booking"
+                },
+                "reply_text": null,
+                "intent": "ask_booking",
+                "position": 4,
+                "active": true,
+                "tenant_id": null,
+                "bot_id": null
+            },
+            {
+                "type": "text",
+                "text": [
+                    "Địa chỉ nhà hàng ở đâu thế?"
+                ],
+                "block": null,
+                "reply_text": "Địa chỉ nhà hàng chính xác tại 291 phố Tô Hiệu - Cầu giấy.\nCần hỗ trợ gì thêm anh/chị vui lòng gọi 0948.290.291",
+                "intent": "ask_address",
+                "position": 5,
+                "active": true,
+                "tenant_id": null,
+                "bot_id": null
+            },
+            {
+                "type": "text",
+                "text": [
+                    "Có thanh toán qua thẻ không?",
+                    "Có thanh toán visa không?"
+                ],
+                "block": null,
+                "reply_text": "Dạ, anh chị có thể thanh toán theo hình thức tiền mặt, chuyển khoản, quẹt thẻ nội địa, quẹt thẻ quốc tế đều được chấp nhận tại nhà hàng ạ.",
+                "intent": "ask_payment_method",
+                "position": 6,
+                "active": true,
+                "tenant_id": null,
+                "bot_id": null
+            },
+            {
+                "type": "text",
+                "text": [
+                    "Quán có ship không?",
+                    "Có bán mang về không ạ?"
+                ],
+                "block": null,
+                "reply_text": "Bên em có nhận ship và free ship bán kính 3km. Nếu anh chị ở xa bên em tính phí ship qua Grabike ạ",
+                "intent": "shipment",
+                "position": 7,
+                "active": true,
+                "tenant_id": null,
+                "bot_id": null
+            },
+            {
+                "type": "text",
+                "text": [
+                    "Có ghế cho trẻ nhỏ không quán?"
+                ],
+                "block": null,
+                "reply_text": "dạ, Nhà hàng có ghế ăn cho trẻ nhỏ ạ",
+                "intent": "ask_children_seat",
+                "position": 8,
+                "active": true,
+                "tenant_id": null,
+                "bot_id": null
+            },
+            {
+                "type": "text",
+                "text": [
+                    "Có chỗ để ô tô không?"
+                ],
+                "block": null,
+                "reply_text": "Dạ, Nhà hàng có bãi để xe ô tô và xe máy và hoàn toàn miễn phí ạ.",
+                "intent": "ask_car_park",
+                "position": 9,
+                "active": true,
+                "tenant_id": null,
+                "bot_id": null
+            },
+            {
+                "type": "text",
+                "text": [
+                    "Cảm ơn",
+                    "Thanks"
+                ],
+                "block": null,
+                "reply_text": "Dạ không có gì. Rất vui được hỗ trợ anh chị ah :-) ❤",
+                "intent": "thanks",
+                "position": 10,
+                "active": true,
+                "tenant_id": null,
+                "bot_id": null
+            }
+        ]
+    },
+    "persistant_menu": {
+        "buttons": [],
+        "active": true,
+        "bot_id": null,
+        "tenant_id": null
+    }
+}

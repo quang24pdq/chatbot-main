@@ -1,0 +1,35 @@
+<div class="row mb-4">
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 rule">
+		<span class="glyphicon glyphicon-trash remove btn-delete" id="btn-delele-rule"
+		style="cursor: pointer; position: absolute; right: 10px; top: 8px; z-index: 999;"></span>
+		<div class="row">
+			<div class="col-md-2 col-sm-2 col-xs-12">
+				<div class="col-md-12 col-sm-12 col-sx-12">{{SETUP_AI_DETECTION}}:</div>
+				<div class="col-md-12 col-sm-3 col-xs-12" style="margin-bottom: 5px;">
+					<input type="text" data-bind="value:intent" />
+					<!-- <input type="text" class="form-control rule-intent" /> -->
+				</div>
+			</div>
+			<div class="col-md-5 col-sm-5 col-xs-12">
+				<div class="col-md-12 col-sm-12 col-sx-12">{{SETUP_AI_RULE_DESC}}:</div>
+				<input type="text" class="form-control" name="typing" />
+				<div class="col-md-12 col-sm-12 col-sx-12" name="list-data" style="margin-top: 5px; margin-bottom: 5px;"></div>
+			</div>
+			<div class="col-md-2 col-sm-2 col-xs-12">
+				<div class="col-md-12 col-xs-12">{{SETUP_AI_REPLY_WITH}}:</div>
+				<div class="col-md-12 col-sm-3 col-xs-12" style="margin-bottom: 5px;">
+					<input type="text" data-bind="value:type" />
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-3 col-xs-12">
+				<div class="col-md-12 col-xs-12">{{SETUP_AI_REPLY_TEXT}}:</div>
+				<div class="col-md-12 col-sm-9 col-xs-12 ai-setup-reply" id="reply-text">
+					<textarea rows="3" data-bind="value:reply_text"></textarea>
+				</div>
+				<div class="col-md-12 col-sm-9 col-xs-12 ai-setup-reply" id="reply-block">
+					<input type="text" data-bind="dict:block" />
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

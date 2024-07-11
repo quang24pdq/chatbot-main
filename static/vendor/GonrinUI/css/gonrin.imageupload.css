@@ -1,0 +1,70 @@
+#img-upload{
+    margin: 0 auto;
+    padding: 0;
+    width: 150px;
+    display: block;
+    border-radius: 2px;
+    
+}
+#upload-button{
+ 
+   
+    border-radius: 4px;
+    opacity: 0.5;
+   border:  3px double gray;
+    width: 150px;
+    height: 100px;
+  
+   
+    
+}
+#upload-button:hover{
+    opacity: 1;
+    
+}
+#file-upload{
+    display: none;
+}
+ #cancle-upload{    
+    opacity: 0.5;
+    width: 15px;
+    height: 15px;
+    
+    float: right;
+}
+ #cancle-upload:hover{
+   opacity: 1.0;
+}
+ #cancle-upload:active{
+   border: 1px solid gray;
+}
+#progress-upload progress{
+    height: 5px;
+    margin-top: 4px;
+   
+    width: 89%;
+    float: left;
+    
+}
+#progress-upload{
+  
+    width: 100%;   
+    display: none;
+   
+    
+    
+}
+#select-img-text{
+   
+    width: 100%;
+    position: relative;
+    
+ 
+}
+#link-upload{
+    width: 100%;
+
+}
+#link{
+    display: none;
+}

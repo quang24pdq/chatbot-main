@@ -1,0 +1,61 @@
+
+#upload-header{
+    clear: both;
+   background-color: gray;
+    width: 100%;
+    margin-bottom: 0px;
+    padding-top: 2px;
+    padding-left: 2px;
+}
+
+.btn-upload-control{
+    width: 25px;
+    height: 25px;
+}
+.btn-item{
+    float: right;
+    width: 20px;
+    height: 20px;
+    opacity: 0.5;
+}
+.btn-item:hover{
+   
+    opacity: 1.0;
+}
+
+ul{
+   
+}
+.btn-upload-control{
+    opacity: 0.5;
+    padding-left: 2px;
+}
+.btn-upload-control:hover{
+    opacity: 1.0;
+}
+#btn-view-list{
+ margin-top: 0px;   
+ padding-top: 5px;
+
+}
+.item{
+   
+}
+#upload-container{
+    width:300px;
+}
+
+ul li{
+    clear: both;
+    width: 100%;
+   display: block;
+ 
+}
+ul{
+    display: none;
+
+}
+
+ul li p{
+    float: left;
+}

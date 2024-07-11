@@ -1,0 +1,35 @@
+{
+    "_id": {
+        "type": "string"
+    },
+    "page_scoped_id": {
+        "type": "string"
+    },
+    "detected_type": {
+        "type": "string"
+    },
+    "detection": {
+        "type": "json"
+    },
+    "started_time": {
+        "type": "number"
+    },
+    "end_time": {
+        "type": "number"
+    },
+    "last_seen": {
+        "type": "number"
+    },
+    "last_sent": {
+        "type": "number"
+    },
+    "page_id": {
+        "type": "string"
+    },
+    "bot_id": {
+        "type": "string"
+    },
+    "tenant_id": {
+        "type": "string"
+    }
+}

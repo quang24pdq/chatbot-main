@@ -1,0 +1,89 @@
+#upload-file-control-container{
+    width: 500px;
+    
+    padding: 0;
+    
+    
+}
+#upload-file-control-container input[type=button]{
+    float: left;
+    width: 20%;
+}
+#upload-file-control-container input[type=text]{
+    float: left;
+    width: 70%;
+}
+#upload-file-control-container .caret{
+   
+    
+}
+#gonrin-upload-file-control-bar{
+   background-color: darkgrey;
+}
+#gonrin-upload-file-control-bar:after{
+    clear: both;
+    content: '';
+    width: 0px;
+    height: 0px;
+    display: block;
+    
+}
+
+#gonrin-upload-file-control-item:after{
+    clear: both;
+    content: '';
+    width: 0px;
+    height: 0px;
+    display: block;
+}
+
+#gonrin-upload-file-control-item:hover{
+    background-color: cornflowerblue;
+}
+
+#gonrin-upload-file-control-item img{
+    float: left;
+    width: 10%;
+    height: auto;
+}
+.gonrin-file-upload-item-content{
+       float: left;
+        width:80%;
+        border-left: 2px double gray;
+}
+#gonrin-upload-file-control-item div p{
+    border-bottom: 1px dotted gray;
+    
+}
+.gonrin-upload-file-item-btn{
+    float: right;
+}
+
+#gonrin-upload-file-control-list{
+    max-height: 200px;
+    overflow-y: scroll;
+}
+.gonrin-upload-file-item-progess{
+    width: 100%;
+    height: 5px;
+}
+
+#remove-item{
+    opacity: 0.5;
+    margin-left: 3px;
+}
+#remove-item:hover{
+    opacity: 1.0;
+}
+
+#gonrin-upload-file-show-file-list{
+    float: right;
+    opacity: 0.7;
+}
+#gonrin-upload-file-show-file-list:hover{
+    opacity: 1.0;
+}
+#gonrin-upload-file-show-file-list:active{
+    border: 1px solid gray;
+    border-radius: 2px;
+}

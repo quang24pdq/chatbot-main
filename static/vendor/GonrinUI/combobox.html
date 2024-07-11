@@ -1,0 +1,221 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<script   src="https://code.jquery.com/jquery-3.5.0.min.js"   integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="   crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/fontawesome.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	
+	<link rel="stylesheet" href="css/gonrin.combobox.css">
+
+	<script src="js/gonrin.core.js"></script>
+	<script src="js/gonrin.combobox.js"></script>
+
+	<script type="text/javascript">
+            $(function () {
+                $('#combobox').combobox({
+                	textField: "age",
+                    valueField: "id",
+					// allowTextInput: true,
+                    enableSearch: true,
+                    //dataSource: "http://abc.com/list.json",
+                    dataSource: [
+                        { age: "Parent1", id: 1 },
+                        { age: "Parent2", id: 2 },
+                        { age: "Parent3", id: 3 },
+                        { age: "Parent4", id: 4 },
+                    ],
+                    /*data_source: {
+                    	type:"",
+                    },*/
+                    /*index: -1,
+                    headerTemplate: "<span>ABC CDE</span",
+                    template: '<span class="k-state-default" style="background-color: \'#666\'"></span>' +
+                    '<span class="k-state-default"><h3>{{ age }}</h3><p>{{ id }}</p></span>',
+                    
+                    validators:[
+                        {
+                        	func: function(value){
+                        		if (value == null){
+                        			return false;
+                        		}
+                        		return true;
+                        	},
+                        	message:"Not null"
+                        }
+                    ],
+                    showStateOnValidateSuccess : true*/
+                });
+                $('#combobox').on('change.gonrin', function(e){
+                	console.log($('#combobox').data('gonrin').getValue());
+                });
+                
+                // $('#combobox').on('search.gonrin', function(e){
+                // 	console.log(e);
+                // });
+                
+                // $("button#validate").bind("click", function(){
+                // 	var ret = $('#combobox').data('gonrin').validate();
+                // 	console.log(ret);
+            	// });
+                
+                
+                // $('#combobox2').combobox({
+                // 	textField: "name1",
+                //     valueField: "id",
+                //     dataSource: [
+                //         "Child 1","Child 2","Child 3","Child 4"
+                //     ],
+                //     /*data_source: {
+                //     	type:"",
+                //     },*/
+                //     index: 1,
+                //     headerTemplate: "<span>ABC CDE</span",
+                //     template: '<span class="k-state-default" style="background-color: \'#666\'"></span>' +
+                //     '<span class="k-state-default"><h3>{{ name1 }}</h3><p>{{ id }}</p></span>',
+                // });
+                // $('#combobox2').on('change.gonrin', function(e){
+                // 	console.log($('#combobox2').data('gonrin').getValue());
+                // });
+                
+                // $('#combobox3').combobox({
+                //     dataSource: [
+                //         3,5,7,9
+                //     ],
+                //     /*data_source: {
+                //     	type:"",
+                //     },*/
+                //     index: 1,
+                //     headerTemplate: "<span>ABC CDE</span",
+                //     template: '<span class="k-state-default" style="background-color: \'#666\'"></span>' +
+                //     '<span class="k-state-default"><h3>{{ name1 }}</h3><p>{{ id }}</p></span>',
+                // });
+                // $('#combobox3').on('change.gonrin', function(e){
+                // 	console.log($('#combobox3').data('gonrin').getValue());
+                // });
+                
+                // $("#refresh").click(function(){
+                // 	$('#combobox3').combobox({
+                // 		dataSource: [
+                //                      13,15
+                //                  ],
+                //         value:15,
+                //         refresh:true
+                // 	});
+                // });
+                
+                // $('#combobox4').combobox({
+                // 	textField: "name",
+                //     valueField: "id",
+                //     type: "list",
+                //     /* dataSource: [
+                //         { name: "Parent1", id: 1 },
+                //         { name: "Parent2", id: 2 },
+                //         { name: "Parent3", id: 3 },
+                //         { name: "Parent4", id: 4 },
+                //     ], */
+                //     dataSource:{
+                //     	"1": "Parent1",
+                //     	"2": "Parent2",
+                //     	"3": "Parent3",
+                //     	"4": "Parent4",
+                //     	"5": "Parent5",
+                //     }
+                //     //value:[2,4],
+                //     //selectionMode: "multiple"
+                // });
+                
+                // $("button#setval").bind("click", function(){
+                // 	var cb = $('#combobox4').data('gonrin');
+                // 	//cb.setValue([1,3]);
+                // 	var val = cb.getValue();
+                // 	console.log(val);
+            	// });
+                
+                // $("button#setdatasource").bind("click", function(){
+                // 	var cb = $('#combobox4').data('gonrin');
+                	
+                // 	var data = [
+                //                  { name: "Parent A", id: 1 },
+                //                  { name: "Parent B", id: 2 },
+                //                  { name: "Parent C", id: 3 },
+                //                  { name: "Parent D", id: 4 },
+                //                  { name: "Parent E", id: 5 },
+                //              ];
+                	
+                // 	cb.setDataSource(data);
+                // 	//var val = cb.getValue();
+                // 	//console.log(val);
+            	// });
+                
+                // var Books = Backbone.Collection.extend({
+                // 	  	url: '/api/v1/quocgia',
+                // 	  	parse: function (response) {
+                //   			//this.page = response.page;
+                //   			//this.numRows = response.num_results;
+                //   			//this.totalPages = response.total_pages;
+              	// 			return response.objects;
+              	// 		},
+                // 	});
+                
+                // $('#combobox5').combobox({
+                // 	textField: "ten",
+                //     valueField: "id",
+                //     dataSource: new Books()
+                // });
+                
+                
+            });
+     </script>
+</head>
+<body>
+	 <div class="container">
+	    <div class="row-fluid" id="content" style="margin-top:20px;">
+	    	<div style="width:100%">
+	    		<div style="width:50%;">
+					<input type='text' id='combobox' placeholder="select..."/>
+				</div>
+			</div>
+			
+			<!-- <button class="btn btn-sm btn-default" id="validate">Validate</button>
+			<br/>
+			<br/>
+			<div style="width:100%">
+	    		<div style="width:50%;">
+					<input type='text' id='combobox2' placeholder="select2..."/>
+				</div>
+			</div>
+			<br/>
+			<div style="width:100%">
+	    		<div style="width:50%;">
+					<input type='text' id='combobox3' placeholder="select3..."/>
+				</div>
+			</div>
+			
+			<button class="btn btn-sm btn-default" id="refresh">refresh</button>
+			
+			
+			<br/>
+			<div style="width:100%">
+	    		<div style="width:50%;">
+					<input type='text' id='combobox4' placeholder="select4..."/>
+				</div>
+			</div>
+			<button class="btn btn-sm btn-default" id="setval">Set Value</button>
+			<button class="btn btn-sm btn-default" id="setdatasource">Set dataSource</button>
+			
+			<br/>
+			<br/>
+			<div style="width:100%">
+	    		<div style="width:50%;">
+					<input type='text' id='combobox5' placeholder="select5..."/>
+				</div>
+			</div> -->
+	    </div> 
+	</div>
+</body>
+</html>

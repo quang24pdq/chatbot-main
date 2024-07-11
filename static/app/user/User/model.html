@@ -1,0 +1,52 @@
+<div class="margin-bottom-10" block-bind="toolbar"></div>
+<div block-bind="content">
+	<div class="row" style="margin-bottom: 10px;">
+		<div class="col-md-4">
+			<div>Tên đăng nhập*</div>
+			<input type="text" data-bind="value:user_name" required/>
+		</div>
+		<div class="col-md-4">
+			<div>Họ và tên</div>
+			<input type="text" data-bind="value:fullname" />
+		</div>
+	</div>
+	<div class="row" style="margin-bottom: 10px">
+		<div class="col-md-4">
+			<div>Phone</div>
+			<input type="text" data-bind="value:phone" />
+		</div>
+		<div class="col-md-4">
+			<div>Email</div>
+			<input type="text" data-bind="value:email" />
+		</div>
+	</div>
+	<div class="row" style="margin-bottom: 10px">
+		<div class="col-md-4">
+			<div>Loại người dùng</div>
+			<input type="text" data-bind="list:roles" />
+		</div>
+		<div class="col-md-4">
+			<div>Cửa hàng</div>
+			<input type="text" data-bind="list:workstations" />
+		</div>
+	</div>
+	<div class="row" style="margin-bottom: 10px">
+		<div class="col-md-4">
+			<div>Mật khẩu*</div>
+			<input type="password" data-bind="value:user_password" placeholder="***********" required/>
+		</div>
+
+		<div class="col-md-4">
+			<div>Nhập lại mật khẩu*</div>
+			<input type="password" data-bind="value:confirm_password" placeholder="***********" required/>
+		</div>
+	</div>
+
+	<!--<div class="row text-center" style="margin-bottom: 10px">
+			<div>{% print(gonrinApp().translate("CREATE")) %}</div>
+			<div class="col-md-2 text-right"><label>Nhập lại mật khẩu</label></div>
+		<div class="col-md-3">
+			<input type="password" class="form-control" id="confirmpassword" data-bind="value:confirmpassword"/>
+		</div>
+	</div> -->
+</div>

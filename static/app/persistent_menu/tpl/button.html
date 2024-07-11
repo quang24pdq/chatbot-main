@@ -1,0 +1,32 @@
+<div class="dropdown" id="btn-{{_id}}">
+	<button id="btn_newbutton" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="width:100%; color:#3385ff;border-radius:0px;border:none;border-top:1px solid lightgray;">
+		<span button-card-text-bind="text:title"></span>
+	</button>
+
+	<div class="dropdown-menu" id="card-button-configure" aria-labelledby="btn_newbutton" style="display:none">
+		<input type="text" style="text-align: center" class="card-button-configure-title" button-card-text-bind="value:title" maxlength="20"/>
+		<ul class="nav nav-tabs">
+			<li style="width:50%">
+				<button class="btn btn-link btn-sm btn-block">
+					<i class="fa fa-sitemap"></i> {{PERSISTENT_MENU_BTN_BLOCK}}</button>
+			</li>
+			<li style="width:50%">
+				<button class="btn btn-link btn-sm btn-url" style="width: 100%;">
+					<i class="fa fa-link"></i> {{PERSISTENT_MENU_BTN_URL}}</button>
+			</li>
+		</ul>
+
+		<div class="tab-content">
+			<div id="tab-block" style="display:none">
+				<input type="text" button-card-text-bind="list:blocks" />
+			</div>
+			<div id="tab-url" style="display:none">
+				<input type="text" button-card-text-bind="value:url" />
+			</div>
+		</div>
+		<div class="text-center" style="margin-top:5px">
+			<button class="btn btn-sm btn-primary card-button-configure-close-button">{{SAVE}}</button>
+			<button class="btn btn-sm btn-danger card-button-configure-delete-button">{{DELETE}}</button>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,14 @@
+<div class="card-quickreply-button-title" id="" style="position: relative; float: left; margin: 2px;">
+	<button id="btn_newbutton" type="button" class="btn btn-default"
+		style="color: #3385ff; float: left; border-radius: 16px;">
+		<span button-card-quickreply-bind="text:title"></span>
+	</button>
+	<div class="" id="card-quickreply-button-configure"
+		style="display: none; position: absolute; top: 35px; border: 0.5px solid lightgray; border-radius: 3px; background-color: #e6e6e6; padding: 5px; z-index: 10; transition: all 0.3s ease; min-width: 165px;">
+		<input type="text" style="text-align: center" class="card-button-configure-title" button-card-quickreply-bind="value:title" autocomplete="off"/>
+		<div class="text-center" style="margin-top:5px">
+			<button id="card-quickreply-button-configure-close-button" class="btn btn-primary btn-sm">{{OK}}</button>
+			<button id="card-quickreply-delete-button" class="btn btn-danger btn-sm">{{DELETE}}</button>
+		</div>
+	</div>
+</div>

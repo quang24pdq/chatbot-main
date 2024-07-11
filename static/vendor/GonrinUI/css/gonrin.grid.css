@@ -1,0 +1,173 @@
+/*
+ * Table styles
+ */
+ .tools{
+ 	margin-bottom:8px;
+ }
+ .bg
+ {
+	 border:solid Orange;
+	 background-color:Orange;
+	 margin-bottom:5px;
+	 height:50px;
+	 font-size:30px;
+	 padding-left:20px;
+	 color:white;
+ }
+ .di
+ {
+	 padding-top:6px
+ }
+table.gonringrid thead .sorting,
+table.gonringrid thead .sorting_asc,
+table.gonringrid thead .sorting_desc,
+table.gonringrid thead .sorting_asc_disabled,
+table.gonringrid thead .sorting_desc_disabled {
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+table.gonringrid thead .sorting {
+  background-image: url("../images/sort_both.png");
+}
+table.gonringrid thead .sorting_asc {
+  background-image: url("../images/sort_asc.png");
+}
+table.gonringrid thead .sorting_desc {
+  background-image: url("../images/sort_desc.png");
+}
+table.gonringrid thead .sorting_asc_disabled {
+  background-image: url("../images/sort_asc_disabled.png");
+}
+table.gonringrid thead .sorting_desc_disabled {
+  background-image: url("../images/sort_desc_disabled.png");
+}
+.gonringrids_wrapper {
+  padding:20px;
+  border:1px solid Orange;
+  position: relative;
+  width:1100px;
+  margin:0px auto;
+  margin-bottom:100px;
+  clear: both;
+  margin-top:60px;
+  *zoom: 1;
+  zoom: 1;
+}
+.gonringrids_wrapper .gonringrids_length {
+  float: left;
+}
+.gonringrids_wrapper .gonringrids_filter {
+  margin-bottom:5px;
+  margin-right:	5px;
+  float: right;
+  text-align: left;
+  margin-bottom:15px;
+  font-size:16px;
+}
+.gonringrids_wrapper .gonringrids_info {
+  clear: both;
+  float: left;
+  padding-top: 0.755em;
+  margin-left:20px;
+
+}
+.gonringrids_wrapper .gonringrids_paginate {
+  margin-right:20px;
+  float: right;
+  text-align: right;
+  padding-top: 0.25em;
+  margin-top:0px;
+}
+.gonringrids_wrapper .gonringrids_paginate .paginate_button {
+  box-sizing: border-box;
+  display: inline-block;
+  margin-left: 0px;
+  text-align: center;
+  text-decoration: none !important;
+  cursor: pointer;
+  *cursor: hand;
+  color: #333 !important;
+}
+.gonringrids_wrapper .gonringrids_paginate .paginate_button.current a {
+  background-color:#F5F5F5;
+}
+.gonringrids_wrapper .gonringrids_paginate .paginate_button.disabled {
+  border: 1px solid transparent;
+}
+.gonringrids_wrapper .gonringrids_paginate .ellipsis {
+  padding: 0 1em;
+}
+.gonringrids_wrapper .gonringrids_processing {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 40px;
+  margin-left: -50%;
+  margin-top: -25px;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 1.2em;
+  background-color: white;
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(25%, rgba(255, 255, 255, 0.9)), color-stop(75%, rgba(255, 255, 255, 0.9)), color-stop(100%, rgba(255, 255, 255, 0)));
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 25%, rgba(255, 255, 255, 0.9) 75%, rgba(255, 255, 255, 0) 100%);
+  background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 25%, rgba(255, 255, 255, 0.9) 75%, rgba(255, 255, 255, 0) 100%);
+  background: -ms-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 25%, rgba(255, 255, 255, 0.9) 75%, rgba(255, 255, 255, 0) 100%);
+  background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 25%, rgba(255, 255, 255, 0.9) 75%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 25%, rgba(255, 255, 255, 0.9) 75%, rgba(255, 255, 255, 0) 100%);
+}
+.gonringrids_wrapper .gonringrids_length,
+.gonringrids_wrapper .gonringrids_filter,
+.gonringrids_wrapper .gonringrids_info,
+.gonringrids_wrapper .gonringrids_processing,
+.gonringrids_wrapper .gonringrids_paginate {
+  color: #333;
+}
+.gonringrids_wrapper .gonringrids_scroll {
+  clear: both;
+}
+.gonringrids_wrapper .gonringrids_scroll div.gonringrids_scrollBody {
+  *margin-top: -1px;
+  -webkit-overflow-scrolling: touch;
+}
+.gonringrids_wrapper .gonringrids_scroll div.gonringrids_scrollBody th, .gonringrids_wrapper .gonringrids_scroll div.gonringrids_scrollBody td {
+  vertical-align: middle;
+}
+.gonringrids_wrapper .gonringrids_scroll div.gonringrids_scrollBody th > div.gonringrids_sizing,
+.gonringrids_wrapper .gonringrids_scroll div.gonringrids_scrollBody td > div.gonringrids_sizing{
+  height: 0;
+  overflow: hidden;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.gonringrids_wrapper.no-footer .gonringrids_scrollBody {
+  border-bottom: 1px solid #111;
+}
+.gonringrids_wrapper.no-footer div.gonringrids_scrollHead table,
+.gonringrids_wrapper.no-footer div.gonringrids_scrollBody table {
+  border-bottom: none;
+}
+.gonringrids_wrapper:after {
+  visibility: hidden;
+  display: block;
+  content: "";
+  clear: both;
+  height: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .gonringrids_wrapper .gonringrids_info,
+  .gonringrids_wrapper .gonringrids_paginate {
+    float: none;
+    text-align: center;
+  }
+  .gonringrids_wrapper .gonringrids_paginate {
+    margin-top: 0.5em;
+  }
+}
+@media screen and (max-width: 640px) {
+  .gonringrids_wrapper .gonringrids_length{
+    float: none;
+    text-align: center;
+  }
+}

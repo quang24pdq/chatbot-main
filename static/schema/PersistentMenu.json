@@ -1,0 +1,16 @@
+{
+    "_id": {
+        "type": "string",
+        "primary": true
+    },
+    "title": {
+        "type": "string"
+    },
+    "blocks": {
+        "type": "list"
+    },
+    "url": {
+        "type": "string"
+    }
+    
+}

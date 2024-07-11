@@ -1,0 +1,58 @@
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 37px !important;
+    height: 20px !important;
+    float: right;
+}
+
+.switch input {
+    display:none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s !important;
+    transition: .4s !important;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px !important;
+    width: 16px !important;
+    left: 2px !important;
+    bottom: 2px !important;
+    background-color: white !important;
+    -webkit-transition: .4s !important;
+    transition: .4s !important;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(16px) !important;
+    -ms-transform: translateX(16px) !important;
+    transform: translateX(16px) !important;
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 24px !important;
+}
+
+.slider.round:before {
+    border-radius: 50% !important;
+}

@@ -1,0 +1,81 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<script src="js/jquery.js"></script>
+	<script src="vendor/bootstrap3/js/bootstrap.js"></script>
+	<link rel="stylesheet" href="vendor/bootstrap3/css/bootstrap.min.css">
+		<!-- Optional theme -->
+	<link rel="stylesheet" href="vendor/bootstrap3/css/bootstrap-theme.min.css">
+	
+	<link rel="stylesheet" href="css/gonrin.radio.css">
+	
+	<style>
+		.yeallow{background-color: #FFF34F}
+	</style>
+	<script src="js/gonrin.core.js"></script>
+	<script src="js/gonrin.radio.js"></script>
+
+	<script type="text/javascript">
+            $(function () {
+            	var radio = $('#radio').radio({
+            		textField: "name",
+                    valueField: "id",
+                    cssClassField: "cssClass",
+                    dataSource: [
+								{ name: "0 value", id: 0 },
+                                 { name: "< 1.4 Petrol, 92kW", id: 1, cssClass: "yeallow" },
+                                 { name: "Parent2", id: 2 },
+                                 { name: "Parent3", id: 5 },
+                                 { name: "Parent4", id: 7 },
+                    ],
+                    //value: 2,
+                    //readonly: true
+            	});
+            	
+            	$("button#setval").bind("click", function(){
+            		radio.data("gonrin").setValue(7);
+            	});
+            	
+            	$('#radio').on('change.gonrin', function(e){
+            		console.log("on change");
+                	console.log($('#radio').data('gonrin').getValue());
+                });
+            	
+            	$('#radio2').radio({
+            		textField: "name",
+                    valueField: "id",
+                    dataSource: [
+                                 { name: "1.4 Petrol, 92kW", id: 1 },
+                                 { name: "ABC", id: 3 },
+                                 { name: "DEC", id: 5 },
+                                 { name: "FFF", id: 7 },
+                    ],
+                    index: 3,
+            	});
+            	
+            	
+                
+            });
+     </script>
+</head>
+<body>
+	 <div class="container">
+	    <div class="row-fluid" id="content" style="margin-top:20px;">
+	    	<div style="width:100%">
+	    		<div style="width:50%;">
+					<input type='text' id='radio'/>
+				</div>
+				<button id="setval">Set Value</button>
+				<hr>
+				<div style="width:50%;">
+					<input type='text' id='radio2' />
+				</div>
+				
+			</div>
+			<br/>
+			
+	    </div> 
+	</div>
+</body>
+</html>

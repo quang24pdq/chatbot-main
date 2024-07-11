@@ -1,0 +1,47 @@
+{
+    "_id": {
+        "type": "string",
+        "primary": true
+    },
+    "name": {
+        "type": "string"
+    },
+    "scope": {
+        "type": "string",
+        "default": "any"
+    },
+    "post_link": {
+        "type": "string"
+    },
+    "post_id": {
+        "type": "string"
+    },
+    "reply_limit": {
+        "type": "number"
+    },
+    "comment_level": {
+        "type": "number"
+    },
+    "action_type": {
+        "type": "string"
+    },
+    "user_group_id": {
+        "type": "string"
+    },
+    "rules": {
+        "type": "list"
+    },
+    "active": {
+        "type": "boolean",
+        "default": false
+    },
+    "bot_id": {
+        "type": "string"
+    },
+    "updated_at": {
+        "type": "number"
+    },
+    "updated_by": {
+        "type": "string"
+    }
+}

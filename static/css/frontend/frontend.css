@@ -1,0 +1,33 @@
+.container-hover {
+	position: relative;
+	/* display: inline-block; */
+}
+
+.container-hover:hover .deletebtn {
+	display: block;
+}
+.deletebtn {
+	padding-top: 3px;	
+	padding-right: 10px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	display: none;
+}
+
+.container-hover-condition {
+	position: relative;
+	display: inline-block;
+}
+
+.container-hover-condtion:hover .deletebtn-condition {
+	display: block;
+}
+.deletebtn-condition {
+	padding-top: 3px;	
+	padding-right: 10px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	display: none;
+}

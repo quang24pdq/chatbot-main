@@ -1,0 +1,29 @@
+{
+    "id": {
+        "type": "string",
+        "primary": true
+    },
+
+    "bot_id": {
+        "type": "string"
+    },
+
+    "contact_id":{
+        "type":"string"
+    },
+
+    "user_defined": {
+        "type": "dict"
+    },
+
+    "deleted_at": {
+        "type": "datetime"
+    },
+    "deleted_by": {
+        "type": "string"
+    },
+    "active": {
+        "type": "boolean",
+        "default": true
+    }    
+}

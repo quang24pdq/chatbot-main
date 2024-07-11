@@ -1,0 +1,29 @@
+{
+    "_id": {
+        "type": "string"
+    },
+    "name": {
+        "type": "string",
+        "default": "input"
+    },
+    "attribute": {
+        "type": "string"
+    },
+    "placeholder": {
+        "type": "string"
+    },
+    "align": {
+        "type": "string",
+        "default": "left"
+    },
+    "color": {
+        "type": "string"
+    },
+    "style_class": {
+        "type": "string",
+        "default": "input-border-bottom"
+    },
+    "position": {
+        "type": "number"
+    }
+}

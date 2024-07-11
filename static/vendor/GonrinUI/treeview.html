@@ -1,0 +1,120 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<script src="js/jquery.js"></script>
+	<script src="vendor/bootstrap3/js/bootstrap.js"></script>
+	<link rel="stylesheet" href="vendor/bootstrap3/css/bootstrap.min.css">
+		<!-- Optional theme -->
+	<link rel="stylesheet" href="vendor/bootstrap3/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="css/gonrin.treeview.css">
+
+	<script src="js/gonrin.core.js"></script>
+	<script src="js/gonrin.treeview.js"></script>
+
+	<script type="text/javascript">
+            $(function () {
+            	
+            	var onNodeChecked = function(event, node){
+            		console.log("onNodeChecked");
+            		console.log(node);
+            		var tree = $("#tree");
+            		if((node != null) && (node.nodes != null)){
+            			for(var i = 0; i < node.nodes.length; i ++){
+            				tree.data("gonrin").checkNode(node.nodes[i].nodeId,{ silent: true });
+            			}
+                    }
+            	}
+            	
+				var onNodeUnchecked = function(event, node){
+            		
+            	}
+            	
+            	var data  = [
+            	                       {
+            	                    	    text: "Parent 1",
+            	                    	    state: {
+                         				        checked: false,
+                         				    },
+            	                    	    nodes: [
+            	                    	      {
+            	                    	        text: "Child 1",
+            	                    	        state: {
+            	             				        checked: false,
+            	             				    },
+            	                    	        nodes: [
+            	                    	          {
+            	                    	            text: "Grandchild 1",
+            	                    	            state: {
+            	                 				        checked: false,
+            	                 				    },
+            	                    	          },
+            	                    	          {
+            	                    	            text: "Grandchild 2",
+            	                    	            state: {
+            	                 				        checked: false,
+            	                 				    },
+            	                    	          }
+            	                    	        ]
+            	                    	      },
+            	                    	      {
+            	                    	        text: "Child 2",
+            	                    	        state: {
+            	             				        checked: false,
+            	             				    },
+            	                    	      }
+            	                    	    ]
+            	                    	  },
+            	                    	  {
+            	                    	    text: "Parent 2",
+            	                    	    state: {
+                         				        checked: false,
+                         				    },
+            	                    	  },
+            	                    	  {
+            	                    	    text: "Parent 3",
+            	                    	    state: {
+                         				        checked: false,
+                         				    },
+            	                    	  },
+            	                    	  {
+            	                    	    text: "Parent 4",
+            	                    	    state: {
+                         				        checked: false,
+                         				    },
+            	                    	  },
+            	                    	  {
+            	                    	    text: "Parent 5",
+            	                    	    state: {
+                         				        checked: false,
+                         				    },
+            	                    	  }
+            	                    	];
+            	
+            	
+            	
+            	
+            	
+            	
+                $("#tree").treeview({
+                	data: data,
+					//onNodeSelected: $.proxy(self.onItemClick, self),
+					nodesField: "nodes",
+					textField: "text",
+					showIcon: false,
+			        showCheckbox: true,
+			        onNodeChecked: onNodeChecked,
+			        onNodeUnchecked: onNodeUnchecked
+                });
+                
+            });
+     </script>
+</head>
+<body>
+	 <div class="container">
+	    <div class="row-fluid" id="content" style="margin-top:20px;">
+	    	<div id="tree"></div>
+	    </div> 
+	</div>
+</body>
+</html>

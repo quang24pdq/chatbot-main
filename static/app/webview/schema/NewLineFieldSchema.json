@@ -1,0 +1,12 @@
+{
+    "_id": {
+        "type": "string"
+    },
+    "name": {
+        "type": "string",
+        "default": "newline"
+    },
+    "position": {
+        "type": "number"
+    }
+}

@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="expires" content="-1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="{{static_url}}/images/favicon.ico">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{static_url}}/vendor/bootstrap4/bootstrap.min.css">
+    <link rel="stylesheet" href="{{static_url}}/css/switch-ui.css">
+    <link rel="stylesheet" href="{{static_url}}/css/loader.css">
+    <link rel="stylesheet" href="{{static_url}}/css/style.css">
+
+
+    <script type="text/javascript" src="{{static_url}}/vendor/jquery/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="{{static_url}}/vendor/bootstrap4/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{{static_url}}/vendor/moment/moment.min.js"></script>
+    <title>{{webview_title}}</title>
+</head>
+
+<body class="authentication-bg mt-3">
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) { return; }
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/messenger.Extensions.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'Messenger'));
+    </script>
+    <div class="container" style="height: calc(100vh - 36px); overflow: scroll;">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-12" id="content">
+                {{body}}
+                <div class="row">
+                    <div class="col-12 mt-3">
+                        <button id="complete" class="btn btn-primary text-uppercase" style="width: 100%;">
+                            Hoàn thành
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end row -->
+    </div>
+    <!-- end container -->
+    <footer class="footer footer-alt text-center"
+        style="position: fixed; bottom: 0px; width: 100%; height: 22px; font-size: 14px; color: #0095ff; background: #fff;">
+        Powered by UPGO.vn
+    </footer>
+
+</body>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script type="text/javascript">
+    var pid = "{{pid}}";
+    const load = () => {
+
+        function validate() {
+            var repOk = true;
+            var html = "";
+            $.each($("#content input,textarea"), (index, ele) => {
+                if ($(ele).attr("name")) {
+                    html += $(ele).attr("name");
+                    if (!$(ele).val()) {
+                        repOk = false;
+                    }
+                }
+            });
+            return repOk;
+        }
+
+        $("#complete").unbind("click").bind("click", () => {
+            // alert("CLICKED");
+            if (!validate()) {
+                return;
+            }
+            var data = {
+                "pid": pid
+            };
+            $.each($("#content input,textarea"), (index, ele) => {
+                if ($(ele).attr("name")) {
+                    data[$(ele).attr("name")] = $(ele).val();
+                }
+            });
+
+            MessengerExtensions.requestCloseBrowser(function success() {
+                // webview closed
+            }, function error(err) {
+                // an error occurred
+            });
+
+            $.ajax({
+                url: "https://bot.upgo.vn/api/v1/webform/receive_webview_data",
+                data: JSON.stringify(data),
+                type: "POST",
+                contentType: "application/json",
+                success: function (response) {
+                    console.log("response ", response);
+                    MessengerExtensions.requestCloseBrowser(function success() {
+                        // webview closed
+                    }, function error(err) {
+                        // an error occurred
+                    });
+                },
+                error: function (xhr) {
+                    console.log("xhr ", xhr);
+                }
+            })
+        });
+
+    }
+    window.onload = load;
+
+</script>
+</body>
+
+</html>

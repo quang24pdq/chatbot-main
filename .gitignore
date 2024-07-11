@@ -1,0 +1,12 @@
+static/images/uploads/*
+.project
+.pydevproject
+.settings
+nohup.out
+service
+/**/*.log
+/**/*.csv
+/**/*.swp
+/**/__pycache__
+/**/*.DS_Store
+/**/.idea

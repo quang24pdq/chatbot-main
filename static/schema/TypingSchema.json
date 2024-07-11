@@ -1,0 +1,30 @@
+{
+    "id": {
+        "type": "string",
+        "primary": true
+    },
+
+    "block_id": {
+        "type": "string",
+        "require": true
+    },
+
+    "time":{
+        "type":"string"
+    },
+
+    "deleted": {
+        "type": "boolean",
+        "default": false
+    },
+    "deleted_at": {
+        "type": "datetime"
+    },
+    "deleted_by": {
+        "type": "string"
+    },
+    "active": {
+        "type": "boolean",
+        "default": true
+    }    
+}

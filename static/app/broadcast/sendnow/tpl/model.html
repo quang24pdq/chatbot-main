@@ -1,0 +1,92 @@
+<div id="broadcast-area" style="position: relative;">
+	<div id="broatcast-tool">
+		<div class="row" style="margin: 5px 0px 0px 0px;">
+			<div class="col-md-11 col-xs-10 padding-lr-0">
+				<input id="broadcast-name" class="form-control mod-item-name" spellcheck="false" dir="auto"
+					style="float: left; width: 300px;" data-bind="value:name" />
+				<button id="sendnow" class="btn btn-danger">
+					<i class="fa fa-paper-plane" aria-hidden="true"></i>
+					{{SEND}}
+				</button>
+			</div>
+			<div class="col-md-1 col-xs-2" style="text-align: right">
+				<a type="button" class="btn btn-link btn-delete btn_delete_broadcast" title="">
+					<span class="fa fa-trash-alt"></span>
+				</a>
+			</div>
+		</div>
+	</div>
+	<hr style="margin-top: 0px;margin-bottom: 13px;">
+	<div class="row">
+		<div class="col-lg-12 col-md-12 form-group">
+			<i style="color: #8a9095;">A broadcast with the `Update` tag will be delivered only to people who are
+				currently in the `24 + 1`
+				messaging window. Use a different tag to send a message to everyone.</i>
+		</div>
+	</div>
+	<div class="row mb-2">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<label>{{BROADCAST_TURN_ON_TIME_FILTERS}}</label>
+			<label class="switch" style="float: left; margin-right: 0.5rem;">
+				<input type="checkbox" class="form-control" id="use_time_condition_switch">
+				<span class="slider round"></span>
+			</label>
+		</div>
+	</div>
+	<div class="row mb-3" for="time_conditons" style="display: none;">
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+			<label>{{START_TIME}}</label>
+			<input class="form-control" id="time_from"/>
+		</div>
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+			<label>{{END_TIME}}</label>
+			<input class="form-control" id="time_to"/>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-lg-12 col-md-12 form-group">
+			<button class="btn btn-default btn-md" id="add_condition" title="Add filter">
+				<span style="color: #333; cursor: pointer;" class="fa fa-plus"></span> {{BROADCAST_ADD_FILTER}}
+			</button>
+		</div>
+		<div id="filter-card">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-12">
+			<i style="color: #8a9095;">{{BROADCAST_SENDNOW_TIP}}</i>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<button class="btn btn-primary btn-md" id="btn_add_broadcast_block"><i class="fas fa-plus"></i> {{CREATE_NEW_BLOCK}}</button>
+			<div class="row" style="margin-top: 15px;">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="broadcast_block_container">
+					<!-- RENDER BLOCK LIST HERE -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row" style="min-height: 100px;">
+		<div id="cards-container">
+			<!-- RENDER CARDS HERE -->
+		</div>
+	</div>
+	<div class="row hide">
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12 col-xs-12">
+						<ul class="nav navbar-nav" id="cards">
+							<li><a href="javascript:void(0);" id="create_card_text" data-card-type="text">{{TEXT_CARD}}</a></li>
+							<li><a href="javascript:void(0);" id="create_card_image" data-card-type="image">{{IMAGE_CARD}}</a></li>
+							<li><a href="javascript:void(0);" id="create_generic_card" data-card-type="generic">{{GENERIC_CARD}}</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</div>
+	<div class="broadcast-overlay" title="Không thể sửa."></div>
+</div>

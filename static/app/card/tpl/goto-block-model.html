@@ -1,0 +1,50 @@
+<div class="col-md-12 container-hover">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<div class="border-gradient-round-27">
+				<div class="border-gradient-round-container" id="position">
+				</div>
+			</div>
+			<div style="margin-left: 28px; font-weight: 550;">
+				{{GO_TO_BLOCK}}
+			</div>
+		</div>
+		<div class="panel-body">
+			<div class="row form-group" style="opacity: 0.4;">
+				<div class="col-lg-12">
+					<span>{{GO_TO_BLOCK_DESC}}</span>
+				</div>
+			</div>
+			<div class="row" id="condition-container"></div>
+			<div class="row">
+				<div class="col-lg-12 col-md-12 form-group">
+					<button class="btn btn-default btn-md" id="add_condition" title="Add filter">
+						<span style="color: #333; cursor: pointer;" class="fa fa-plus"></span>
+						{{GO_TO_BLOCK_ADD}}
+					</button>
+				</div>
+			</div>
+			<div class="row card-gotoblock-bind">
+				<div class="col-lg-10 col-md-10">
+					<div>{{GO_TO_BLOCK_NAME}}</div>
+					<input type="text" card-gotoblock-bind="list:blocks" />
+				</div>
+				<div class="col-lg-2 col-md-2 form-inline">
+					<div>Random</div>
+					<input class="form-control" type="checkbox" card-gotoblock-bind="value:random" />
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="deletebtn">
+		<a type="button" class="btn btn-link fa-inverse btn-delete" id="up_card_position" style="padding: 6px 0px;">
+			<span class="glyphicon glyphicon-arrow-up"></span>
+		</a>
+		<a type="button" class="btn btn-link fa-inverse btn-delete" id="down_card_position" style="padding: 6px 0px;">
+			<span class="glyphicon glyphicon-arrow-down"></span>
+		</a>
+		<a type="button" class="btn btn-link fa-inverse btn-delete" id="delete_card" title="Delete this card">
+			<span class="glyphicon glyphicon-trash remove"></span>
+		</a>
+	</div>
+</div>
